@@ -54,67 +54,67 @@
             ценный приз — 1000 миль на вашу бонусную карту!
             Пожалуйста, заполните форму ниже:
           </p>
-          <form action="" class="form">
+          <form method="POST" action="https://echo.htmlacademy.ru/" class="form">
             <fieldset class="form__fieldset form__fieldset--no-border">
               <div class="form__field-wrapper">
                 <label for="surname">Фамилия:</label>
-                <input type="text" class="form__input" name="surname" placeholder="Укажите фамилию *">
+                <input type="text" class="form__input" name="surname" id="surname" placeholder="Укажите фамилию *">
               </div>
               <div class="form__field-wrapper">
                 <label for="name">Имя:</label>
-                <input type="text" class="form__input" name="name" placeholder="Введите ваше имя *">
+                <input type="text" class="form__input" name="name" id="name" placeholder="Введите ваше имя *">
               </div>
               <div class="form__field-wrapper">
                 <label for="patronymic">Отчество:</label>
-                <input type="text" class="form__input" name="patronymic" placeholder="Ну и отчество тоже">
+                <input type="text" class="form__input" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
               </div>
             </fieldset>
 
             <fieldset class="form__fieldset">
               <legend class="form__legend">С каким приложением путешествовали?</legend>
-              <label for="surname">Pink для iOS</label>
-              <input type="radio" class="form__radio form__radio--active" name="ios">
-              <label for="name">Pink на Android</label>
-              <input type="radio" class="form__radio" name="android">
-              <label for="patronymic">Windows Phone</label>
-              <input type="radio" class="form__radio" name="windows">
+              <label for="ios">Pink для iOS</label>
+              <input type="radio" class="form__radio form__radio--active" name="ios" id="ios">
+              <label for="android">Pink на Android</label>
+              <input type="radio" class="form__radio" name="android" id="android">
+              <label for="windows">Windows Phone</label>
+              <input type="radio" class="form__radio" name="windows" id="windows">
             </fieldset>
 
             <fieldset class="form__fieldset">
               <legend class="form__legend">Контактная информация</legend>
               <div class="form__field-wrapper">
-                <input type="text" class="form__input" name="phone" placeholder="Номер, пожалуйста">
-                <label for="surname">Номер телефона:</label>
+                <input type="text" class="form__input" name="phone" id="phone" placeholder="Номер, пожалуйста">
+                <label for="phone">Номер телефона:</label>
               </div>
               <div class="form__field-wrapper">
-                <input type="text" class="form__input" name="email" placeholder="Введите почту *">
-                <label for="name">Адрес почты</label>
+                <input type="text" class="form__input" name="email" id="email" placeholder="Введите почту *">
+                <label for="email">Адрес почты</label>
               </div>
             </fieldset>
 
             <fieldset class="form__fieldset">
               <legend class="form__legend">Ваши безбашенные
                 достижения в путешествии</legend>
-              <label for="surname">Сделал селфи с акулой</label>
-              <input type="checkbox" class="form__checkbox form__checkbox--checked" name="selfie">
-              <label for="name">Обгорел на пляже</label>
-              <input type="checkbox" class="form__checkbox form__checkbox--checked" name="sunburn">
-              <label for="patronymic">Видел Чака Норриса</label>
-              <input type="checkbox" class="form__checkbox" name="norris">
-              <label for="patronymic">Накупил сувениров</label>
-              <input type="checkbox" class="form__checkbox" name="souvenirs">
-              <label for="patronymic">Удержал башню</label>
-              <input type="checkbox" class="form__checkbox form__checkbox--checked" name="tower">
-              <label for="patronymic">Разгромил отель</label>
-              <input type="checkbox" class="form__checkbox" name="hotel">
+              <label for="selfie">Сделал селфи с акулой</label>
+              <input type="checkbox" class="form__checkbox form__checkbox--checked" name="selfie" id="selfie">
+              <label for="sunburn">Обгорел на пляже</label>
+              <input type="checkbox" class="form__checkbox form__checkbox--checked" name="sunburn" id="sunburn">
+              <label for="norris">Видел Чака Норриса</label>
+              <input type="checkbox" class="form__checkbox" name="norris" id="norris">
+              <label for="souvenirs">Накупил сувениров</label>
+              <input type="checkbox" class="form__checkbox" name="souvenirs" id="souvenirs">
+              <label for="tower">Удержал башню</label>
+              <input type="checkbox" class="form__checkbox form__checkbox--checked" name="tower" id="tower">
+              <label for="hotel">Разгромил отель</label>
+              <input type="checkbox" class="form__checkbox" name="hotel" id="hotel">
             </fieldset>
 
-            <fieldset>
+            <fieldset class="form__fieldset">
               <legend class="form__legend">Опишите свои эмоции</legend>
-              <textarea name="feedback" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              <textarea class="form__textarea" name="feedback" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
             <div class="form__confirm-section">
-              <button class="button button--submit" type="button">Отправить форму</button>
+              <button class="button button--submit" type="submit">Отправить форму</button>
               <p class="form__warning">
                 <span>*</span> — обязательные поля
               </p>
