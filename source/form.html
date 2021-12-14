@@ -58,64 +58,70 @@
             <span>Пожалуйста, заполните форму ниже:</span>
           </p>
           <form method="POST" action="https://echo.htmlacademy.ru/" class="form">
-            <fieldset class="form__fieldset form__fieldset--no-border">
-              <div class="form__field-wrapper">
-                <label class="field__label" for="surname">Фамилия:</label>
-                <input type="text" class="form__input" name="surname" id="surname" placeholder="Укажите фамилию *">
-              </div>
-              <div class="form__field-wrapper">
-                <label class="field__label" for="name">Имя:</label>
-                <input type="text" class="form__input" name="name" id="name" placeholder="Введите ваше имя *">
-              </div>
-              <div class="form__field-wrapper">
-                <label class="field__label" for="patronymic">Отчество:</label>
-                <input type="text" class="form__input" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
-              </div>
-            </fieldset>
-
-            <fieldset class="form__fieldset">
-              <legend class="form__legend">С каким приложением путешествовали?</legend>
-              <label class="field__label field__label--normal" for="ios">Pink для iOS</label>
-              <input type="radio" class="form__radio form__radio--active" name="ios" id="ios">
-              <label class="field__label field__label--normal" for="android">Pink на Android</label>
-              <input type="radio" class="form__radio" name="android" id="android">
-              <label class="field__label field__label--normal" for="windows">Windows Phone</label>
-              <input type="radio" class="form__radio" name="windows" id="windows">
-            </fieldset>
-
-            <fieldset class="form__fieldset">
-              <legend class="form__legend">Контактная информация</legend>
-              <div class="form__field-wrapper">
-                <input type="text" class="form__input" name="phone" id="phone" placeholder="Номер, пожалуйста">
-                <label class="field__label" for="phone">Номер телефона:</label>
-              </div>
-              <div class="form__field-wrapper">
-                <input type="text" class="form__input" name="email" id="email" placeholder="Введите почту *">
-                <label class="field__label" for="email">Адрес почты</label>
-              </div>
-            </fieldset>
-
-            <fieldset class="form__fieldset">
-              <legend class="form__legend">Ваши безбашенные
-                достижения в путешествии</legend>
-              <label class="field__label field__label--normal" for="selfie">Сделал селфи с акулой</label>
-              <input type="checkbox" class="form__checkbox form__checkbox--checked" name="selfie" id="selfie">
-              <label class="field__label field__label--normal" for="sunburn">Обгорел на пляже</label>
-              <input type="checkbox" class="form__checkbox form__checkbox--checked" name="sunburn" id="sunburn">
-              <label class="field__label field__label--normal" for="norris">Видел Чака Норриса</label>
-              <input type="checkbox" class="form__checkbox" name="norris" id="norris">
-              <label class="field__label field__label--normal" for="souvenirs">Накупил сувениров</label>
-              <input type="checkbox" class="form__checkbox" name="souvenirs" id="souvenirs">
-              <label class="field__label field__label--normal" for="tower">Удержал башню</label>
-              <input type="checkbox" class="form__checkbox form__checkbox--checked" name="tower" id="tower">
-              <label class="field__label field__label--normal" for="hotel">Разгромил отель</label>
-              <input type="checkbox" class="form__checkbox" name="hotel" id="hotel">
-            </fieldset>
-
-            <fieldset class="form__fieldset">
-              <legend class="form__legend">Опишите свои эмоции</legend>
-              <textarea class="form__textarea" name="feedback" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-            </fieldset>
+            <div class="form__fieldset-wrapper">
+              <fieldset class="form__fieldset form__fieldset--no-border">
+                <div class="form__field-wrapper">
+                  <label class="field__label" for="surname">Фамилия:</label>
+                  <input type="text" class="form__input" name="surname" id="surname" placeholder="Укажите фамилию *">
+                </div>
+                <div class="form__field-wrapper">
+                  <label class="field__label" for="name">Имя:</label>
+                  <input type="text" class="form__input" name="name" id="name" placeholder="Введите ваше имя *">
+                </div>
+                <div class="form__field-wrapper">
+                  <label class="field__label" for="patronymic">Отчество:</label>
+                  <input type="text" class="form__input" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+                </div>
+              </fieldset>
+            </div>
+            <div class="form__fieldset-wrapper">
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">С каким приложением путешествовали?</legend>
+                <label class="field__label field__label--normal" for="ios">Pink для iOS</label>
+                <input type="radio" class="form__radio form__radio--active" name="ios" id="ios">
+                <label class="field__label field__label--normal" for="android">Pink на Android</label>
+                <input type="radio" class="form__radio" name="android" id="android">
+                <label class="field__label field__label--normal" for="windows">Windows Phone</label>
+                <input type="radio" class="form__radio" name="windows" id="windows">
+              </fieldset>
+            </div>
+            <div class="form__fieldset-wrapper">
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Контактная информация</legend>
+                <div class="form__field-wrapper">
+                  <input type="text" class="form__input" name="phone" id="phone" placeholder="Номер, пожалуйста">
+                  <label class="field__label" for="phone">Номер телефона:</label>
+                </div>
+                <div class="form__field-wrapper">
+                  <input type="text" class="form__input" name="email" id="email" placeholder="Введите почту *">
+                  <label class="field__label" for="email">Адрес почты</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form__fieldset-wrapper">
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Ваши безбашенные
+                  достижения в путешествии</legend>
+                <label class="field__label field__label--normal" for="selfie">Сделал селфи с акулой</label>
+                <input type="checkbox" class="form__checkbox form__checkbox--checked" name="selfie" id="selfie">
+                <label class="field__label field__label--normal" for="sunburn">Обгорел на пляже</label>
+                <input type="checkbox" class="form__checkbox form__checkbox--checked" name="sunburn" id="sunburn">
+                <label class="field__label field__label--normal" for="norris">Видел Чака Норриса</label>
+                <input type="checkbox" class="form__checkbox" name="norris" id="norris">
+                <label class="field__label field__label--normal" for="souvenirs">Накупил сувениров</label>
+                <input type="checkbox" class="form__checkbox" name="souvenirs" id="souvenirs">
+                <label class="field__label field__label--normal" for="tower">Удержал башню</label>
+                <input type="checkbox" class="form__checkbox form__checkbox--checked" name="tower" id="tower">
+                <label class="field__label field__label--normal" for="hotel">Разгромил отель</label>
+                <input type="checkbox" class="form__checkbox" name="hotel" id="hotel">
+              </fieldset>
+            </div>
+            <div class="form__fieldset-wrapper">
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Опишите свои эмоции</legend>
+                <textarea class="form__textarea" name="feedback" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              </fieldset>
+            </div>
             <div class="form__confirm-section">
               <button class="button button--submit" type="submit">Отправить форму</button>
               <p class="form__warning">
