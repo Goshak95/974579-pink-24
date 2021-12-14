@@ -28,6 +28,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    port: 3005,
   });
   done();
 }
