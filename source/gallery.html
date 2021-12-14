@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк. Фотографии</title>
   </head>
   <body class="page__body">
@@ -45,12 +46,15 @@
     </header>
     <main class="page-main">
       <section class="promo">
-        <div class="promo__wrapper">
-          <h1 class="title-main">Фотографии пользователей</h1>
+        <div class="promo__header">
+          <h1 class="title-main title-main--light">Фотографии пользователей</h1>
         </div>
       </section>
       <section class="gallery">
         <div class="gallery__wrapper">
+          <p class="gallery__slogan">
+            Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+          </p>
           <div class="gallery__item gallery__item--main">
             <img class="gallery__photo" src="img/catalog/panorama-desktop.jpg" alt="Фотография">
             <p class="gallery__user">
@@ -78,6 +82,7 @@
               </p>
               <div class="gallery__like">
                 <button class="gallery__like-button"></button>
+                <span>Нравится: 356</span>
               </div>
             </li>
             <li class="gallery__item">
@@ -155,12 +160,12 @@
       </section>
       <section class="filter">
         <div class="filter__wrapper">
-          <p class="text">
+          <p class="filter__text">
             Затмите их всех!<br>
             Выкладывайте все, что накопилось в телефоне!
           </p>
           <div class="filter__container">
-            <img class="filter__photo" src="/source/img/catalog/photo-7-desktop.jpg" alt="Фотография">
+            <img class="filter__photo" src="img/catalog/photo-7-desktop.jpg" alt="Фотография">
             <div class="filter__controls">
               <div class="filter__slider filter__slider--crop">
                 <div class="filter__control"></div>
@@ -173,8 +178,8 @@
               </div>
             </div>
             <div class="filter__buttons">
-              <button class="button" type="button">Запостить</button>
-              <button class="button" type="button">Отмена</button>
+              <button class="button button--colored" type="button">Запостить</button>
+              <button class="button button--colored" type="button">Отмена</button>
             </div>
           </div>
         </div>
@@ -185,7 +190,6 @@
         <svg class="logo__icon" width="60" height="40">
           <use xlink:href="img/logo.svg"></use>
         </svg>
-        Pink
       </a>
       <ul class="socials">
         <li class="socials__item">
