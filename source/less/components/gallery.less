@@ -1,15 +1,20 @@
 // .gallery {
-
 // }
 
-.gallery__wrapper {
-  padding: 54px 20px 0 20px;
-}
-
 .gallery__slogan {
+  padding-top: 54px;
+  padding-bottom: 60px;
   margin: 0;
-  margin-bottom: 60px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 85px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 97px;
+  }
 }
 
 .gallery__list {
@@ -23,31 +28,4 @@
   &:not(:last-of-type) {
     margin-bottom: 20px;
   }
-}
-
-.gallery__photo {
-  width: 100%;
-}
-
-// .gallery__user {
-
-// }
-
-.gallery__name {
-  font-weight: 700;
-}
-
-.gallery__time {
-  font-size: 12px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
-// .gallery__text {
-
-// }
-
-.gallery__like {
-  color: @pink;
-  text-transform: uppercase;
 }

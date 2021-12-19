@@ -8,150 +8,157 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="logo" href="#">
-        <svg class="logo__icon" width="60" height="40">
-          <use xlink:href="img/logo.svg"></use>
-        </svg>
-        Pink
-      </a>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <button class="main-nav__button" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="index.html">
-                Главная
-              </a>
-            </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a href="gallery.html">
-                Фотографии
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html">
-                Конкурс
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="index.html">
-                Html academy
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="wrapper page-header__wrapper">
+        <a class="logo" href="#">
+          <svg class="logo__icon" width="60" height="40">
+            <use xlink:href="img/logo.svg"></use>
+          </svg>
+          Pink
+        </a>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <button class="main-nav__button" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="index.html">
+                  Главная
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="gallery.html">
+                  Фотографии
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">
+                  Конкурс
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="index.html">
+                  Html academy
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <section class="promo">
         <div class="promo__header">
-          <h1 class="title-main title-main--light">Фотографии пользователей</h1>
+          <div class="wrapper">
+            <h1 class="title-main title-main--light">Фотографии пользователей</h1>
+          </div>
         </div>
       </section>
       <section class="gallery">
-        <div class="gallery__wrapper">
+        <div class="wrapper">
           <p class="gallery__slogan">
             Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
           </p>
-          <div class="gallery__item gallery__item--main">
-            <img class="gallery__photo" src="img/catalog/panorama-desktop.jpg" alt="Фотография">
-            <p class="gallery__user">
-              <span class="gallery__name">Анна</span>
-              <span class="gallery__time">(5 минут назад)</span>
+        </div>
+        <div class="card card__item--main">
+          <img class="card__photo" src="img/catalog/panorama-desktop.jpg" alt="Фотография">
+          <div class="wrapper">
+            <p class="card__user">
+              <span class="card__name">Анна</span>
+              <span class="card__time">(5 минут назад)</span>
             </p>
-            <p class="gallery__text">
+            <p class="card__text">
               Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
             </p>
-            <div class="gallery__like">
-              <button class="gallery__like-button"></button>
+            <div class="card__like">
+              <button class="card__like-button"></button>
               <span>Нравится: 215</span>
             </div>
           </div>
-
+        </div>
+        <div class="wrapper">
           <ul class="gallery__list">
-            <li class="gallery__item">
-              <img class="gallery__photo" src="img/catalog/photo-1-desktop.jpg" alt="Фотография">
-              <p class="gallery__user">
-                <span class="gallery__name">Левон</span>
-                <span class="gallery__time">(5 часов назад)</span>
+            <li class="card gallery__item">
+              <img class="card__photo" src="img/catalog/photo-1-desktop.jpg" alt="Фотография">
+              <p class="card__user">
+                <span class="card__name">Левон</span>
+                <span class="card__time">(5 часов назад)</span>
               </p>
-              <p class="gallery__text">
+              <p class="card__text">
                 Вчера он на луну летал, сегодня в руки к нам попал.
               </p>
-              <div class="gallery__like">
-                <button class="gallery__like-button"></button>
+              <div class="card__like">
+                <button class="card__like-button"></button>
                 <span>Нравится: 356</span>
               </div>
             </li>
-            <li class="gallery__item">
-              <img class="gallery__photo" src="img/catalog/photo-2-desktop.jpg" alt="Фотография">
-              <p class="gallery__user">
-                <span class="gallery__name">Антон</span>
-                <span class="gallery__time">(12 часов назад)</span>
+            <li class="card gallery__item">
+              <img class="card__photo" src="img/catalog/photo-2-desktop.jpg" alt="Фотография">
+              <p class="card__user">
+                <span class="card__name">Антон</span>
+                <span class="card__time">(12 часов назад)</span>
               </p>
-              <p class="gallery__text">
+              <p class="card__text">
                 Соседи будут рады!
               </p>
-              <div class="gallery__like">
-                <button class="gallery__like-button"></button>
+              <div class="card__like">
+                <button class="card__like-button"></button>
                 <span>Нравится: 666</span>
               </div>
             </li>
-            <li class="gallery__item">
-              <img class="gallery__photo" src="img/catalog/photo-3-desktop.jpg" alt="Фотография">
-              <p class="gallery__user">
-                <span class="gallery__name">Борис</span>
-                <span class="gallery__time">(20 часов назад)</span>
+            <li class="card gallery__item">
+              <img class="card__photo" src="img/catalog/photo-3-desktop.jpg" alt="Фотография">
+              <p class="card__user">
+                <span class="card__name">Борис</span>
+                <span class="card__time">(20 часов назад)</span>
               </p>
-              <p class="gallery__text">
+              <p class="card__text">
                 Здесь могла быть ваша цитата о высоком и вечном.
               </p>
-              <div class="gallery__like">
-                <button class="gallery__like-button"></button>
+              <div class="card__like">
+                <button class="card__like-button"></button>
                 <span>Нравится: 215</span>
               </div>
             </li>
-            <li class="gallery__item">
-              <img class="gallery__photo" src="img/catalog/photo-4-desktop.jpg" alt="Фотография">
-              <p class="gallery__user">
-                <span class="gallery__name">Сергей</span>
-                <span class="gallery__time">(25 часов назад)</span>
+            <li class="card gallery__item">
+              <img class="card__photo" src="img/catalog/photo-4-desktop.jpg" alt="Фотография">
+              <p class="card__user">
+                <span class="card__name">Сергей</span>
+                <span class="card__time">(25 часов назад)</span>
               </p>
-              <p class="gallery__text">
+              <p class="card__text">
                 Самая кубанская в мире!
               </p>
-              <div class="gallery__like">
-                <button class="gallery__like-button"></button>
+              <div class="card__like">
+                <button class="card__like-button"></button>
                 <span>Нравится: 4</span>
               </div>
             </li>
-            <li class="gallery__item">
-              <img class="gallery__photo" src="img/catalog/photo-5-desktop.jpg" alt="Фотография">
-              <p class="gallery__user">
-                <span class="gallery__name">Максим</span>
-                <span class="gallery__time">(40 часов назад)</span>
+            <li class="card gallery__item">
+              <img class="card__photo" src="img/catalog/photo-5-desktop.jpg" alt="Фотография">
+              <p class="card__user">
+                <span class="card__name">Максим</span>
+                <span class="card__time">(40 часов назад)</span>
               </p>
-              <p class="gallery__text">
+              <p class="card__text">
                 Где снег-то?
               </p>
-              <div class="gallery__like">
-                <button class="gallery__like-button"></button>
+              <div class="card__like">
+                <button class="card__like-button"></button>
                 <span>Нравится: 150</span>
               </div>
             </li>
-            <li class="gallery__item">
-              <img class="gallery__photo" src="img/catalog/photo-6-desktop.jpg" alt="Фотография">
-              <p class="gallery__user">
-                <span class="gallery__name">Надежда</span>
-                <span class="gallery__time">(45 часов назад)</span>
+            <li class="card gallery__item">
+              <img class="card__photo" src="img/catalog/photo-6-desktop.jpg" alt="Фотография">
+              <p class="card__user">
+                <span class="card__name">Надежда</span>
+                <span class="card__time">(45 часов назад)</span>
               </p>
-              <p class="gallery__text">
+              <p class="card__text">
                 Всем GM и взаимные лайки!
               </p>
-              <div class="gallery__like">
-                <button class="gallery__like-button"></button>
+              <div class="card__like">
+                <button class="card__like-button"></button>
                 <span>Нравится: 2560</span>
               </div>
             </li>
@@ -159,27 +166,31 @@
         </div>
       </section>
       <section class="filter">
-        <div class="filter__wrapper">
+        <div class="wrapper">
           <p class="filter__text">
             Затмите их всех!<br>
             Выкладывайте все, что накопилось в телефоне!
           </p>
-          <div class="filter__container">
-            <img class="filter__photo" src="img/catalog/photo-7-desktop.jpg" alt="Фотография">
-            <div class="filter__controls">
-              <div class="filter__slider filter__slider--crop">
-                <div class="filter__control"></div>
+        </div>
+        <div class="filter__container">
+          <div class="wrapper">
+            <div class="filter__wrapper">
+              <img class="filter__photo" src="img/catalog/photo-7-desktop.jpg" alt="Фотография">
+              <div class="filter__controls">
+                <div class="filter__slider filter__slider--crop">
+                  <div class="filter__control"></div>
+                </div>
+                <div class="filter__slider filter__slider--fill">
+                  <div class="filter__control"></div>
+                </div>
+                <div class="filter__slider filter__slider--contrast">
+                  <div class="filter__control"></div>
+                </div>
               </div>
-              <div class="filter__slider filter__slider--fill">
-                <div class="filter__control"></div>
+              <div class="filter__buttons">
+                <button class="button button--colored" type="button">Запостить</button>
+                <button class="button button--colored" type="button">Отмена</button>
               </div>
-              <div class="filter__slider filter__slider--contrast">
-                <div class="filter__control"></div>
-              </div>
-            </div>
-            <div class="filter__buttons">
-              <button class="button button--colored" type="button">Запостить</button>
-              <button class="button button--colored" type="button">Отмена</button>
             </div>
           </div>
         </div>
