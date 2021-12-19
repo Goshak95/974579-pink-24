@@ -1,7 +1,13 @@
 .page-footer {
   flex-shrink: 0;
-}
+  padding: 40px 0;
 
-.page-footer__wrapper {
-  padding: 40px 20px;
+  @media (min-width: @tablet-width) {
+    padding-top: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 75px;
+  }
 }
