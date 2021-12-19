@@ -1,18 +1,21 @@
 .prices {
   line-height: 30px;
-}
-
-.prices__wrapper {
-  padding: 83px 20px 49px 20px;
+  padding: 83px 0 49px 0;
 }
 
 .prices__list {
   .normalize-list();
+  width: calc(100% * 3);
+  display: flex;
 }
 
-// .prices__item {
+.prices__item {
+  width: 100%;
 
-// }
+  &--with-empty {
+    display: none;
+  }
+}
 
 .prices__info {
   background-color: @gray-blue;
