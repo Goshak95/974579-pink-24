@@ -1,13 +1,29 @@
 .downloads {
   background-color: @dark-blue;
+  padding: 28px 0;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    position: absolute;
+    background-color: transparent;
+    bottom: 120px;
+    left: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    background-color: transparent;
+    bottom: 120px;
+    left: 10.8%;
   }
 }
 
 .downloads__wrapper {
-  padding: 28px 20px;
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .downloads__list {

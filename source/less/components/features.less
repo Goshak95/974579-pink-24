@@ -2,12 +2,29 @@
 
 // }
 
-.features__wrapper {
-  padding: 20px 48px;
+.features__slogan {
+  padding: 46px 0 70px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 58px 0 47px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 77px 0 72px 0;
+  }
 }
 
 .features__list {
   .normalize-list();
+
+  @media (min-width: @tablet-width) {
+    height: 695px;
+    padding: 28px 0 28px 310px;
+    background-image: url("../../img/iphone\ screen-3.jpg"), url("../../img/iphone\ 3.png");
+    background-repeat: no-repeat;
+    background-size: 237px auto, 268px auto;
+    background-position: 15px 61px, 0 0;
+  }
 }
 
 .features__item {
@@ -17,15 +34,46 @@
 .features__title {
   font-size: 18px;
   font-weight: 700;
+  margin: 0;
 }
 
-// .features__text {
-
-// }
+.features__text {
+  margin: 0;
+}
 
 .features__main {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
+
+.features__timer {
+  @media (min-width: @tablet-width) {
+    width: 238px;
+    height: 276px;
+    background-image: url("../../img/24.svg"), url("../../img/diagram-fill.svg"), url("../../img/timer.svg");
+    background-repeat: no-repeat;
+    background-position: 64px 116px, 18px 56px, center;
+    background-size: 110px 75px, 202px, 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 298px;
+    height: 345px;
+    background-position: 80px 145px, 23px 70px, center;
+    background-size: 138px 94px, 252px, 100%;
+  }
+}
+
+.features__data {
+  @media (min-width: @tablet-width) {
+    margin-left: 72px;
+  }
+}
+
 
 .features__title-main {
   font-size: 30px;
