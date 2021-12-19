@@ -1,5 +1,14 @@
 .modal {
+  width: 100%;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 780px;
+  }
 }
 
 .modal__title {

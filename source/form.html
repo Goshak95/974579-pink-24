@@ -8,50 +8,54 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="logo" href="#">
-        <svg class="logo__icon" width="60" height="40">
-          <use xlink:href="img/logo.svg"></use>
-        </svg>
-        Pink
-      </a>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <button class="main-nav__button" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="index.html">
-                Главная
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="gallery.html">
-                Фотографии
-              </a>
-            </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a href="form.html">
-                Конкурс
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="index.html">
-                Html academy
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="wrapper page-header__wrapper">
+        <a class="logo" href="#">
+          <svg class="logo__icon" width="60" height="40">
+            <use xlink:href="img/logo.svg"></use>
+          </svg>
+          Pink
+        </a>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <button class="main-nav__button" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="index.html">
+                  Главная
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="gallery.html">
+                  Фотографии
+                </a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="form.html">
+                  Конкурс
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="index.html">
+                  Html academy
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <section class="promo">
         <div class="promo__header">
-          <h1 class="title-main title-main--light">Конкурс на самое безбашенное путешествие с Пинк</h1>
+          <div class="wrapper">
+            <h1 class="title-main title-main--light">Конкурс на самое безбашенное путешествие с Пинк</h1>
+          </div>
         </div>
       </section>
       <section class="form-container">
-        <div class="form-container__wrapper">
+        <div class="wrapper">
           <p class="form-container__text">
             Поделитесь своей историей и получите шанс выиграть
             ценный приз — 1000 миль на вашу бонусную карту!
@@ -133,23 +137,25 @@
       </section>
     </main>
     <footer class="page-footer">
-      <a class="logo" href="#">
-        <img src="img/logo.svg" alt="Логотип" width="60" height="40">
-      </a>
-      <ul class="socials">
-        <li class="socials__item">
-          <a>Twitter</a>
-        </li>
-        <li class="socials__item">
-          <a>Facebook</a>
-        </li>
-        <li class="socials__item">
-          <a>Youtube</a>
-        </li>
-      </ul>
-      <div class="copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/study">HTML Academy</a>
+      <div class="wrapper">
+        <a class="logo" href="#">
+          <img src="img/logo.svg" alt="Логотип" width="60" height="40">
+        </a>
+        <ul class="socials">
+          <li class="socials__item">
+            <a>Twitter</a>
+          </li>
+          <li class="socials__item">
+            <a>Facebook</a>
+          </li>
+          <li class="socials__item">
+            <a>Youtube</a>
+          </li>
+        </ul>
+        <div class="copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/study">HTML Academy</a>
+        </div>
       </div>
     </footer>
     <div class="modal">

@@ -1,9 +1,16 @@
 .form-container {
+  padding-top: 54px;
+  padding-bottom: 26px;
   line-height: 30px;
-}
 
-.form-container__wrapper {
-  padding: 54px 20px 44px 20px;
+  @media (min-width: @tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+  }
 }
 
 .form-container__text {
