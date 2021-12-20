@@ -3,29 +3,29 @@
 }
 
 .promo__header {
-  height: 237px;
+  min-height: 237px;
   background: url("../../img/back-tablet.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-width: @tablet-width) {
-    height: 440px;
+    min-height: 440px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 394px;
+    min-height: 394px;
     background-image: url("../../img/back-desktop.jpg");
   }
 
   &--with-phone {
-    height: 462px;
+    min-height: 462px;
 
     @media (min-width: @tablet-width) {
-      height: 729px;
+      min-height: 729px;
     }
 
     @media (min-width: @desktop-width) {
-      height: 853px;
+      min-height: 853px;
     }
   }
 }
