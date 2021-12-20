@@ -6,12 +6,17 @@
   z-index: 10;
 }
 
-.page-header__wrapper {
+.page-header__container {
   padding-top: 22px;
   padding-bottom: 21px;
 
   @media (min-width: @tablet-width) {
     padding-top: 27px;
     padding-bottom: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
   }
 }
