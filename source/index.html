@@ -8,10 +8,9 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__wrapper">
+      <div class="wrapper page-header__container">
         <a class="logo" href="#"></a>
         <nav class="main-nav">
-          <div class="main-nav__wrapper">
             <button class="main-nav__button" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
@@ -37,17 +36,18 @@
                 </a>
               </li>
             </ul>
-          </div>
         </nav>
       </div>
     </header>
     <main class="page-main">
       <section class="promo">
         <div class="promo__header promo__header--with-phone">
-          <h1 class="title-main title-main--light">Взгляните на жизнь <br> иначе!</h1>
+          <div class="wrapper promo__wrapper">
+            <h1 class="title-main title-main--light promo__title">Взгляните на жизнь <br> иначе!</h1>
+          </div>
         </div>
         <div class="downloads">
-          <div class="downloads__wrapper">
+          <div class="wrapper downloads__wrapper">
             <a class="button" href="">Скачать приложение</a>
             <ul class="downloads__list">
               <li class="downloads__item">
@@ -73,10 +73,10 @@
         </div>
       </section>
       <section class="features">
-        <div class="features__wrapper">
-          <div class="title-main">
-            <p>Устали от серости мегаполиса?</p>
-            <p>Нам есть, что вам предложить!</p>
+        <div class="wrapper">
+          <div class="features__slogan">
+            <p class="title-main">Устали от серости мегаполиса?</p>
+            <p class="title-main">Нам есть, что вам предложить!</p>
           </div>
           <ul class="features__list">
             <li class="features__item">
@@ -99,17 +99,18 @@
             </li>
           </ul>
           <div class="features__main">
-            <span class="timer">24</span>
-            <h3 class="features__title-main">Эффект на 24 часа!</h3>
-            <p class="features__text">
-              Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
-            </p>
-            <a class="features__link" href="">Узнать больше об исследовании</a>
+            <div class="features__data">
+              <h3 class="features__title-main">Эффект на 24 часа!</h3>
+              <p class="features__text">
+                Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+              </p>
+              <a class="features__link" href="">Узнать больше об исследовании</a>
+            </div>
           </div>
         </div>
       </section>
       <section class="reviews">
-        <div class="reviews__wrapper">
+        <div class="wrapper">
           <ul class="reviews__list">
             <li class="reviews__item">
               <div class="reviews__author">
@@ -129,41 +130,63 @@
         </div>
       </section>
       <section class="prices">
-        <div class="prices__wrapper">
+        <div class="wrapper prices__container">
           <ul class="prices__list">
-            <li class="prices__item">
-              <div class="prices__info prices__info--empty">
+            <li class="prices__item prices__item--with-empty">
+              <div class="prices__option">
+                <p class="prices__option-name">Розовый фильтр</p>
               </div>
-              <div class="prices__option-name">Розовый фильтр</div>
-              <div class="prices__option-name">Смайлики</div>
-              <div class="prices__option-name">Комментарии</div>
+              <div class="prices__option">
+                <p class="prices__option-name">Смайлики</p>
+              </div>
+              <div class="prices__option">
+                <p class="prices__option-name">Комментарии</p>
+              </div>
             </li>
             <li class="prices__item">
               <div class="prices__info">
                 <span class="prices__name">База</span>
                 <span class="prices__cost">1,99 USD</span>
               </div>
-              <div class="prices__option prices__option--yes"></div>
-              <div class="prices__option prices__option--no"></div>
-              <div class="prices__option prices__option--no"></div>
+              <div class="prices__option prices__option--yes">
+                <p class="prices__option-name">Розовый фильтр</p>
+              </div>
+              <div class="prices__option prices__option--no">
+                <p class="prices__option-name">Смайлики</p>
+              </div>
+              <div class="prices__option prices__option--no">
+                <p class="prices__option-name">Комментарии</p>
+              </div>
             </li>
             <li class="prices__item prices__item--hit">
               <div class="prices__info">
                 <span class="prices__name">Стандарт</span>
                 <span class="prices__cost">3,99 USD</span>
               </div>
-              <div class="prices__option prices__option--yes"></div>
-              <div class="prices__option prices__option--yes"></div>
-              <div class="prices__option prices__option--no"></div>
+              <div class="prices__option prices__option--yes">
+                <p class="prices__option-name">Розовый фильтр</p>
+              </div>
+              <div class="prices__option prices__option--yes">
+                <p class="prices__option-name">Смайлики</p>
+              </div>
+              <div class="prices__option prices__option--no">
+                <p class="prices__option-name">Комментарии</p>
+              </div>
             </li>
             <li class="prices__item">
               <div class="prices__info">
                 <span class="prices__name">Анлим</span>
                 <span class="prices__cost">9,99 USD</span>
               </div>
-              <div class="prices__option prices__option--yes"></div>
-              <div class="prices__option prices__option--yes"></div>
-              <div class="prices__option prices__option--yes"></div>
+              <div class="prices__option prices__option--yes">
+                <p class="prices__option-name">Розовый фильтр</p>
+              </div>
+              <div class="prices__option prices__option--yes">
+                <p class="prices__option-name">Смайлики</p>
+              </div>
+              <div class="prices__option prices__option--yes">
+                <p class="prices__option-name">Комментарии</p>
+              </div>
             </li>
           </ul>
           <div class="prices__controls">
@@ -174,7 +197,7 @@
         </div>
       </section>
       <section class="contacts">
-        <div class="contacts__wrapper">
+        <div class="wrapper">
           <h1 class="title-main">Остались вопросы?<br>Свяжитесь с нами!</h1>
           <ul class="contacts__list">
             <li class="contacts__item">
@@ -185,6 +208,14 @@
                 +7 (812) 555-66-66
               </p>
             </li>
+            <li class="contacts__item contacts__item--main">
+              <p class="contacts__caption">
+                Приезжайте в гости:
+              </p>
+              <p class="contacts__text">
+                ул. Большая Конюшенная, 19/8
+              </p>
+            </li>
             <li class="contacts__item">
               <p class="contacts__caption">
                 Пишите:
@@ -193,21 +224,13 @@
                 mail@htmlacademy.ru
               </p>
             </li>
-            <li class="contacts__item">
-              <p class="contacts__caption">
-                Приезжайте в гости:
-              </p>
-              <p class="contacts__text">
-                ул. Большая Конюшенная, 19/8
-              </p>
-            </li>
           </ul>
         </div>
       </section>
       <img src="img/map.jpg" alt="Карта" class="map">
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="wrapper page-footer__container">
         <a class="logo" href="#">
           <img src="img/logo.svg" alt="Логотип" width="60" height="40">
         </a>

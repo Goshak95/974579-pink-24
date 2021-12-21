@@ -1,9 +1,16 @@
-// .reviews {
+.reviews {
+  padding-top: 50px;
+  padding-bottom: 60px;
 
-// }
+  @media (min-width: @tablet-width) {
+    padding-top: 110px;
+    padding-bottom: 20px;
+  }
 
-.reviews__wrapper {
-  padding: 50px 20px 60px 20px;
+  @media (min-width: @desktop-width) {
+    padding-top: 72px;
+    padding-bottom: 40px;
+  }
 }
 
 .reviews__list {
