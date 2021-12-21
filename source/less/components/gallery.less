@@ -19,6 +19,16 @@
 
 .gallery__list {
   .normalize-list();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .gallery__item {
@@ -27,5 +37,10 @@
 
   &:not(:last-of-type) {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    margin-right: 20px;
   }
 }
