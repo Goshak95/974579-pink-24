@@ -41,7 +41,11 @@
 
   &--small {
     @media (min-width: @desktop-width) {
-      flex-grow: 0.5;
+      flex-basis: 430px;
+
+      &:nth-of-type(2n) {
+        margin-left: auto;
+      }
     }
   }
 }
@@ -87,6 +91,7 @@
 }
 
 .form__textarea {
+  width: 100%;
   font-size: 18px;
   font-family: inherit;
 
