@@ -14,11 +14,14 @@
   flex-direction: column;
   background-color: @light-gray;
   padding: 25px 0 25px 17px;
-  min-height: 144px;
+  flex-grow: 1;
 
   @media (min-width: @tablet-width) {
     padding: 30px;
-    min-height: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 27px;
   }
 }
 

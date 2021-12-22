@@ -19,25 +19,23 @@
 
 .gallery__list {
   .normalize-list();
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
   }
 
-  @media (min-width: @tablet-width) {
-    display: flex;
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 55px 20px;
   }
 }
 
 .gallery__item {
-  &:not(:last-of-type) {
-    margin-bottom: 20px;
-  }
-
   @media (min-width: @tablet-width) {
     width: 300px;
-    margin-right: 20px;
   }
 }
