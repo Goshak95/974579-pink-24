@@ -117,7 +117,7 @@
     line-height: 30px;
 
     &--with-margin {
-      margin-bottom: 47px;
+      margin-bottom: 33px;
     }
   }
 }
@@ -177,8 +177,17 @@
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 10px 0;
+  }
 }
 
 .features__link {
   color: @pink;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+  }
 }
