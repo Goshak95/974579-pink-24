@@ -55,9 +55,20 @@
   }
 }
 
-// .control-button {
+.control-button {
+  background: none;
+  padding: 0;
+  width: 0;
+  height: 0;
+  border: 3px solid fade(@gray-blue, 30%);
+  border-radius: 50%;
 
-// }
+  &--active {
+    width: 12px;
+    height: 12px;
+    border: 3px solid rgba(40, 54, 69, 1);
+  }
+}
 
 .wrapper {
   width: 100%;
