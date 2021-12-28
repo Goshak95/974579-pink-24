@@ -1,9 +1,10 @@
-// .features {
-
-// }
+.features {
+  background-color: @light-gray;
+}
 
 .features__slogan {
-  padding: 46px 0 70px 0;
+  background-color: @white;
+  padding: 46px 0 36px 0;
 
   @media (min-width: @tablet-width) {
     padding: 58px 0 47px 0;
@@ -14,44 +15,125 @@
   }
 }
 
+.features__slogan-text {
+  @media (max-width: @mobile-width-only) {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
 .features__list {
   .normalize-list();
+  padding: 87px 0 368px 0;
+  background-image: url("../../img/features-phone.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
 
   @media (min-width: @tablet-width) {
-    min-height: 695px;
-    padding: 28px 0 28px 310px;
-    background-image: url("../../img/iphone\ screen-3.jpg"), url("../../img/iphone\ 3.png");
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0 235px 310px;
+    background-image: url("../../img/features-phone-tablet.png");
     background-repeat: no-repeat;
-    background-size: 237px auto, 268px auto;
-    background-position: 15px 61px, 0 0;
+    background-size: auto;
+    background-position: 0 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: none;
+    padding: 6px 24px 60px 24px;
   }
 }
 
 .features__item {
-  text-align: center;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @light-gray;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 300px;
+
+    &:not(:last-child) {
+      margin: 0 68px 0 0;
+    }
+
+    &--phone {
+      &_1 {
+        background-image: url("../../img/feature-phone-1.png");
+      }
+
+      &_2 {
+        background-image: url("../../img/feature-phone-2.png");
+      }
+
+      &_3 {
+        background-image: url("../../img/feature-phone-3.png");
+      }
+    }
+  }
 }
 
 .features__title {
   font-size: 18px;
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 24px 0;
+
+  @media (min-width: @desktop-width) {
+    background-color: @light-gray;
+    font-size: 30px;
+    line-height: 30px;
+    padding-top: 60px;
+    margin: 0 0 35px 0;
+  }
 }
 
 .features__text {
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+
+    &--with-margin {
+      margin-bottom: 47px;
+    }
+  }
+}
+
+.features__main-container {
+  background-color: @white;
+  margin-top: -235px;
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+    margin: 0;
+  }
 }
 
 .features__main {
   display: none;
   position: relative;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     display: block;
-    padding: 100px 0 30px 310px;
+    padding: 102px 0 26px 310px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 115px 25px 120px 370px;
+    padding: 115px 36px 120px 370px;
   }
 
   &::before {
@@ -67,21 +149,19 @@
     background-position: bottom left;
 
     @media (min-width: @desktop-width) {
-      bottom: 67px;
       background-size: 298px 345px;
       background-position: 0 17px;
     }
   }
 }
 
-.features__data {
-  @media (min-width: @tablet-width) {
-    margin-left: 72px;
-  }
-}
+// .features__data {
+
+// }
 
 
 .features__title-main {
+  margin: 0 0 24px 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
