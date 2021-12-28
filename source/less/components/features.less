@@ -50,9 +50,15 @@
 }
 
 .features__item {
-  text-align: left;
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 36px;
+  }
 
   @media (min-width: @tablet-width) {
+    text-align: left;
+
     &:not(:last-child) {
       margin-bottom: 36px;
     }
@@ -90,6 +96,10 @@
   font-weight: 700;
   margin: 0 0 24px 0;
 
+  @media (min-width: @tablet-width) {
+    margin: 0 0 14px 0;
+  }
+
   @media (min-width: @desktop-width) {
     background-color: @light-gray;
     font-size: 30px;
@@ -113,8 +123,10 @@
 }
 
 .features__main-container {
-  background-color: @white;
-  margin-top: -235px;
+  @media (min-width: @tablet-width) {
+    background-color: @white;
+    margin-top: -205px;
+  }
 
   @media (min-width: @desktop-width) {
     background-color: transparent;
