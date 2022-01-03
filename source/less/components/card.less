@@ -6,22 +6,30 @@
     width: 100%;
     padding: 0;
     margin-bottom: 20px;
+
+    & .card__like {
+      @media (min-width: @desktop-width) {
+        position: absolute;
+        right: 27px;
+      }
+    }
   }
 }
 
 .card__info {
   display: flex;
   flex-direction: column;
+  position: relative;
   background-color: @light-gray;
-  padding: 25px 0 25px 17px;
+  padding: 25px 17px;
   flex-grow: 1;
 
   @media (min-width: @tablet-width) {
-    padding: 30px;
+    padding: 19px 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 30px 27px;
+    padding: 18px 27px;
   }
 }
 
@@ -30,7 +38,7 @@
 }
 
 .card__user {
-  margin: 0 0 14px 0;
+  margin: 0 0 10px 0;
 }
 
 .card__name {
@@ -44,12 +52,59 @@
 }
 
 .card__text {
-  margin: 0;
+  margin: 0 0 11px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 11px 0;
+  }
 }
 
 .card__like {
+  display: flex;
+  align-items: center;
   margin-top: auto;
   font-size: 12px;
   color: @pink;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 30px;
+    flex-direction: row-reverse;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    right: 0;
+    flex-direction: row;
+  }
+}
+
+.card__like-button {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  margin-right: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+    margin-left: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 18px;
+    margin-left: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 12px;
+    background-image: url("../../img/icons/heart.svg");
+  }
 }
