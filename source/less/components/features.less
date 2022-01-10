@@ -112,6 +112,10 @@
 .features__text {
   margin: 0;
 
+  &--with-margin {
+    margin-bottom: 18px;
+  }
+
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
@@ -140,36 +144,42 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    display: block;
-    padding: 102px 0 26px 310px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 115px 36px 120px 370px;
+    align-items: center;
   }
 
   &::before {
     content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
+    display: block;
+    flex-shrink: 0;
+    width: 238px;
+    height: calc(276px + 54px);
     background-image: url("../../img/timer.svg");
     background-repeat: no-repeat;
     background-size: 238px 276px;
     background-position: bottom left;
+    padding-top: 54px;
 
     @media (min-width: @desktop-width) {
+      width: 298px;
+      height: calc(345px + 17px + 67px);
       background-size: 298px 345px;
+      padding-top: 17px;
+      padding-bottom: 67px;
       background-position: 0 17px;
     }
   }
 }
 
-// .features__data {
-
-// }
+.features__data {
+  margin-left: 72px;
+  margin-bottom: 29px;
+}
 
 
 .features__title-main {
@@ -177,9 +187,11 @@
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  white-space: pre-line;
 
   @media (min-width: @desktop-width) {
     margin: 0 0 10px 0;
+    white-space: normal;
   }
 }
 
