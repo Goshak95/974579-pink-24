@@ -34,6 +34,13 @@
 }
 
 .page-footer__logo-icon {
+  &:hover path:nth-child(-n+5) {
+    fill: @pink;
+  }
+
+  &:active path:nth-child(-n+5) {
+    fill: fade(@gray-blue, 30%);
+  }
   @media (min-width: @desktop-width) {
     display: none;
   }
