@@ -45,6 +45,16 @@
   border-radius: 29px;
   padding: 18px 35px;
 
+  &:hover {
+    background-color: @white;
+    color: @pink;
+  }
+
+  &:active {
+    background-color: @white;
+    color: fade(@pink, 30%);
+  }
+
   &--submit {
     color: @white;
     background-color: @green;
@@ -62,6 +72,14 @@
   height: 0;
   border: 3px solid fade(@gray-blue, 30%);
   border-radius: 50%;
+
+  &:hover {
+    border: 3px solid fade(@gray-blue, 60%);
+  }
+
+  &:active {
+    border: 3px solid fade(@gray-blue, 10%);
+  }
 
   &:not(:last-child) {
     margin: 0 19px 0 0;
