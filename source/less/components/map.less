@@ -1,4 +1,25 @@
 .map {
-  display: block;
+  position: relative;
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 33px 160px 0 160px;
+    border-color: @white transparent transparent transparent;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 5px);
+    width: 36px;
+    height: 36px;
+    background-image: url("../../img/icons/marker.svg");
+  }
 }
