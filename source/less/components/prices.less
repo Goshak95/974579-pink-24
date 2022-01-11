@@ -1,7 +1,26 @@
 .prices {
+  position: relative;
   line-height: 30px;
   padding-top: 83px;
   background-color: @light-gray;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid @white;
+    border-right: 100vw solid transparent;
+
+    @media (min-width: @tablet-width) {
+      border-top: 42px solid @white;
+    }
+
+    @media (min-width: @desktop-width) {
+      border-top: 100px solid @white;
+    }
+  }
 }
 
 .prices__container {
