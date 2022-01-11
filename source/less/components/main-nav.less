@@ -4,7 +4,6 @@
   left: 0;
   width: 100%;
   background-color: @gray-blue;
-  z-index: 2;
 
   @media (min-width: @desktop-width) {
     width: auto;
@@ -68,6 +67,10 @@
     fill: @pink;
   }
 
+  &:active path {
+    fill: fade(@pink, 30%);
+  }
+
   @media (min-width: @desktop-width) {
     display: none;
   }
@@ -96,6 +99,7 @@
 }
 
 .main-nav__item {
+  position: relative;
   font-size: 18px;
   line-height: 13px;
   text-transform: uppercase;
@@ -105,10 +109,31 @@
   border-top: 1px solid @light-brown;
   border-bottom: 1px solid @black;
 
+  &:hover {
+    color: @pink;
+  }
+
+  &:active {
+    color: fade(@pink, 30%);
+  }
+
+  &--active {
+    @media (min-width: @desktop-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -16px;
+        background-color: @white;
+        height: 2px;
+        width: 100%;
+      }
+    }
+  }
+
   @media (min-width: @desktop-width) {
     font-weight: 300;
     text-transform: none;
-    padding: 0;
+    padding: 0 0 6px 0;
     border: none;
 
     &:not(:last-child) {
@@ -120,4 +145,12 @@
 .main-nav__item a {
   text-decoration: none;
   color: @white;
+
+  &:hover {
+    color: @pink;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
 }

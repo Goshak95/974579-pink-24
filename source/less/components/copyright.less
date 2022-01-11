@@ -10,4 +10,12 @@
 
 .copyright__link {
   cursor: pointer;
+
+  &:hover path {
+    fill: @gray-blue;
+  }
+
+  &:active path {
+    fill: fade(@gray-blue, 30%);
+  }
 }
