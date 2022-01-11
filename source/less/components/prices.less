@@ -1,23 +1,25 @@
 .prices {
   position: relative;
   line-height: 30px;
-  padding-top: 83px;
   background-color: @light-gray;
 
   &::before {
     content: "";
-    position: absolute;
-    top: 0;
+    display: block;
     width: 0;
     height: 0;
     border-top: 20px solid @white;
     border-right: 100vw solid transparent;
+  }
 
-    @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
+    &::before {
       border-top: 42px solid @white;
     }
+  }
 
-    @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
+    &::before {
       border-top: 100px solid @white;
     }
   }
@@ -25,6 +27,17 @@
 
 .prices__container {
   overflow: hidden;
+  padding-top: 82px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 56px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 56px;
+    padding-bottom: 98px;
+  }
 }
 
 .prices__list {
@@ -40,7 +53,9 @@
 }
 
 .prices__item {
+  position: relative;
   width: 100%;
+  background-color: @white;
 
   &:first-child .prices__option {
     border-left: 2px solid @gray;
@@ -62,6 +77,7 @@
         width: 100%;
         padding: 38px 0 35px 0;
         border-bottom: 2px solid @gray;
+        background-color: @light-gray;
 
         @media (min-width: @desktop-width) {
           padding: 46px 0;
@@ -80,10 +96,6 @@
         display: block;
       }
     }
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 46px 0;
   }
 }
 
