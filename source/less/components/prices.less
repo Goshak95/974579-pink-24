@@ -107,13 +107,42 @@
   background-color: @gray-blue;
   color: @white;
   text-align: center;
+  overflow: hidden;
+  position: relative;
+
+  &--hit {
+    &::before {
+      content: "ХИТ";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: @white;
+      transform: rotate(-40deg);
+      top: 14px;
+      left: -20px;
+      position: absolute;
+      background-color: @pink;
+      width: 104px;
+      height: 23px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 9px 30px 6px 30px;
+
+    &::before {
+      top: 6px;
+      left: -33px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 12px 30px 22px 30px;
+
+    &::before {
+      top: 14px;
+      left: -20px;
+    }
   }
 }
 
