@@ -1,7 +1,41 @@
 .socials {
   .normalize-list();
+  display: flex;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
-// .socials__item {
+.socials__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
 
-// }
+.socials__link {
+  display: flex;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 3px solid fade(@gray-blue, 10%);
+  border-radius: 50%;
+  cursor: pointer;
+
+  & svg {
+    width: 100%;
+  }
+
+  &:hover {
+    border: 3px solid @gray-blue;
+  }
+
+  &:active {
+    border: 3px solid fade(@gray-blue, 10%);
+
+    & path {
+      fill: fade(@pink, 30%);
+    }
+  }
+}

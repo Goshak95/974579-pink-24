@@ -1,5 +1,14 @@
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .title-main {
@@ -13,14 +22,38 @@
   &--light {
     color: @white;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .button {
+  text-align: center;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 13px;
   font-weight: 700;
   text-decoration: none;
   color: @white;
+  border: 3px solid @white;
+  border-radius: 29px;
+  padding: 18px 35px;
+
+  &:hover {
+    background-color: @white;
+    color: @pink;
+  }
+
+  &:active {
+    background-color: @white;
+    color: fade(@pink, 30%);
+  }
 
   &--submit {
     color: @white;
@@ -32,15 +65,31 @@
   }
 }
 
-// .control-button {
+.control-button {
+  background: none;
+  padding: 0;
+  width: 0;
+  height: 0;
+  border: 3px solid fade(@gray-blue, 30%);
+  border-radius: 50%;
 
-// }
+  &:hover {
+    border: 3px solid fade(@gray-blue, 60%);
+  }
 
-.logo {
-  display: block;
-  width: 74px;
-  height: 23px;
-  background-image: url("../../img/logo-mobile.svg");
+  &:active {
+    border: 3px solid fade(@gray-blue, 10%);
+  }
+
+  &:not(:last-child) {
+    margin: 0 19px 0 0;
+  }
+
+  &--active {
+    width: 12px;
+    height: 12px;
+    border: 3px solid rgba(40, 54, 69, 1);
+  }
 }
 
 .wrapper {

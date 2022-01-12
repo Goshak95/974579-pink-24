@@ -15,9 +15,42 @@
 .page-footer__container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+.page-footer__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__logo-icon {
+  &:hover path:nth-child(-n+5) {
+    fill: @pink;
+  }
+
+  &:active path:nth-child(-n+5) {
+    fill: fade(@gray-blue, 30%);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
   }
 }

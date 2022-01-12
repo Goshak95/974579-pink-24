@@ -1,20 +1,90 @@
 .main-nav {
   position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
   background-color: @gray-blue;
-  z-index: 2;
 
   @media (min-width: @desktop-width) {
     width: auto;
     position: static;
     background-color: transparent;
   }
+
+  &--closed {
+    background: transparent;
+
+    & .main-nav__icon--opened {
+      display: none;
+    }
+
+    & .main-nav__icon--closed {
+      display: block;
+    }
+
+    & .main-nav__list {
+      display: none;
+
+      @media (min-width: @desktop-width) {
+        display: flex;
+      }
+    }
+
+    & .main-nav__button-container {
+      padding: 21px @content-padding;
+      border-bottom: none;
+
+      @media (min-width: @tablet-width) {
+        padding: 43px @content-padding;
+      }
+    }
+  }
+}
+
+.main-nav__button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 23px @content-padding;
+  border-bottom: 1px solid @black;
+
+  @media (min-width: @tablet-width) {
+    padding: 43px @content-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__button {
+  display: block;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  &:hover path {
+    fill: @pink;
+  }
+
+  &:active path {
+    fill: fade(@pink, 30%);
+  }
+
   @media (min-width: @desktop-width) {
     display: none;
+  }
+}
+
+.main-nav__icon {
+  margin-left: auto;
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
   }
 }
 
@@ -29,17 +99,42 @@
 }
 
 .main-nav__item {
+  position: relative;
   font-size: 18px;
-  line-height: 32px;
+  line-height: 13px;
   text-transform: uppercase;
   font-weight: 700;
-  padding: 25px 0 25px 0;
+  padding: 25px @content-padding;
   text-align: center;
+  border-top: 1px solid @light-brown;
+  border-bottom: 1px solid @black;
+
+  &:hover {
+    color: @pink;
+  }
+
+  &:active {
+    color: fade(@pink, 30%);
+  }
+
+  &--active {
+    @media (min-width: @desktop-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -16px;
+        background-color: @white;
+        height: 2px;
+        width: 100%;
+      }
+    }
+  }
 
   @media (min-width: @desktop-width) {
     font-weight: 300;
     text-transform: none;
-    padding: 0;
+    padding: 0 0 6px 0;
+    border: none;
 
     &:not(:last-child) {
       margin-right: 80px;
@@ -50,4 +145,12 @@
 .main-nav__item a {
   text-decoration: none;
   color: @white;
+
+  &:hover {
+    color: @pink;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
 }
