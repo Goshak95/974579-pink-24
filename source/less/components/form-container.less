@@ -14,9 +14,14 @@
 }
 
 .form-container__text {
+  margin: 0;
   text-align: center;
 
   & span {
     display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 74px;
   }
 }
