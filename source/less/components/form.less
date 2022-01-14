@@ -370,9 +370,17 @@
 .form__warning {
   text-transform: uppercase;
   margin: 0;
+}
 
-  & span {
-    color: @pink;
+.form__asterisk {
+  color: @pink;
+}
+
+.form__desktop-text {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
   }
 }
 
