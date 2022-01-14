@@ -20,6 +20,13 @@
   }
 }
 
+.form__fieldset-wrapper {
+  @media (min-width: @desktop-width) {
+    width: auto;
+    padding: 0;
+  }
+}
+
 .form__container {
   padding: 42px 0;
 
@@ -60,36 +67,50 @@
 }
 
 .form__fieldset {
+  position: relative;
   border: none;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     border: 2px solid @gray;
-    padding: 40px 60px 54px 60px;
+    padding: 0 60px 54px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 40px 74px 54px 74px;
+    padding: 0 74px 54px 74px;
 
     &--contacts {
-      display: flex;
-      padding: 30px 62px 14px 62px;
+      padding: 0 62px 14px 62px;
     }
 
     &--achievements {
-      display: grid;
-      grid-template-columns: max-content max-content max-content;
-      justify-content: space-between;
-      gap: 40px 0;
-      padding: 40px 60px 57px 60px;
+      padding: 0 60px 57px 60px;
+    }
+
+    &--app {
+      padding: 0 28px 54px 28px;
     }
   }
 }
 
-.form__fieldset-wrapper {
-  @media (min-width: @desktop-width) {
-    width: auto;
-    padding: 0;
+.form__field-group {
+  &--contacts {
+    @media (min-width: @desktop-width) {
+      display: flex;
+    }
+  }
+
+  &--achievements {
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: max-content max-content max-content;
+      justify-content: space-between;
+      gap: 40px 0;
+    }
+  }
+
+  &--app {
+
   }
 }
 
@@ -135,26 +156,11 @@
     @media (min-width: @tablet-width) {
       flex-direction: column;
       position: relative;
-      padding-right: 54px;
-
-      &::after {
-        content: "";
-        background-color: @gray;
-        border-right: 2px solid @gray;
-        border-radius: 6px;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        width: 59px;
-        height: 63px;
-        position: absolute;
-        right: 5px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url("../../img/icons/phone.svg");
-      }
 
       & .form__input {
         margin-bottom: 10px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
       }
 
       & .form__label {
@@ -163,12 +169,38 @@
     }
 
     @media (min-width: @desktop-width) {
+      flex-grow: 1;
       &:first-of-type {
         margin-right: 74px;
         margin-bottom: 0;
       }
       margin-bottom: 0;
     }
+  }
+
+  &--app {
+    @media (min-width: @desktop-width) {
+      margin: 0 46px;
+    }
+  }
+}
+
+.form__contact-container {
+  display: flex;
+
+  &::after {
+    content: "";
+    background-color: @gray;
+    border-right: 2px solid @gray;
+    border-radius: 6px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 59px;
+    height: 63px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../img/icons/phone.svg");
   }
 
   &--phone {
@@ -259,8 +291,12 @@
   white-space: pre-line;
   padding: 0 25px;
 
-  @media (min-width: @desktop-width) {
-    white-space: nowrap;
+  @media (min-width: @tablet-width) {
+    background-color: @white;
+    padding: 0 30px;
+    margin: -10px auto 32px auto;
+    white-space: normal;
+    width: fit-content;
   }
 
   &--with-margin {
@@ -272,6 +308,12 @@
   &--contacts {
     @media (max-width: @mobile-width-only) {
       display: none;
+    }
+  }
+
+  &--app {
+    @media (min-width: @tablet-width) {
+      padding: 0 25px;
     }
   }
 }

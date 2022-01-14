@@ -113,19 +113,21 @@
             </div>
             <div class="form__container form__container--small form__container--highlighted">
               <div class="wrapper form__fieldset-wrapper">
-                <fieldset class="form__fieldset">
-                  <legend class="form__legend form__legend--with-margin">С каким приложением путешествовали?</legend>
-                  <div class="form__field-wrapper form__field-wrapper--app">
-                    <input type="radio" class="form__radio" name="ios" id="ios">
-                    <label class="form__label form__label--radio form__label--normal" for="ios">Pink для iOS</label>
-                  </div>
-                  <div class="form__field-wrapper form__field-wrapper--app">
-                    <input type="radio" class="form__radio" name="android" id="android">
-                    <label class="form__label form__label--radio form__label--normal" for="android">Pink на Android</label>
-                  </div>
-                  <div class="form__field-wrapper form__field-wrapper--app">
-                    <input type="radio" class="form__radio" name="windows" id="windows">
-                    <label class="form__label form__label--radio form__label--normal" for="windows">Windows Phone</label>
+                <fieldset class="form__fieldset form__fieldset--app">
+                  <div class="form__legend form__legend--with-margin form__legend--app">С каким приложением путешествовали?</div>
+                  <div class="form__field-group form__field-group--app">
+                    <div class="form__field-wrapper form__field-wrapper--app">
+                      <input type="radio" class="form__radio" name="ios" id="ios">
+                      <label class="form__label form__label--radio form__label--normal" for="ios">Pink для iOS</label>
+                    </div>
+                    <div class="form__field-wrapper form__field-wrapper--app">
+                      <input type="radio" class="form__radio" name="android" id="android">
+                      <label class="form__label form__label--radio form__label--normal" for="android">Pink на Android</label>
+                    </div>
+                    <div class="form__field-wrapper form__field-wrapper--app">
+                      <input type="radio" class="form__radio" name="windows" id="windows">
+                      <label class="form__label form__label--radio form__label--normal" for="windows">Windows Phone</label>
+                    </div>
                   </div>
                 </fieldset>
               </div>
@@ -133,14 +135,20 @@
             <div class="form__container">
               <div class="wrapper form__fieldset-wrapper">
                 <fieldset class="form__fieldset form__fieldset--contacts">
-                  <legend class="form__legend form__legend--contacts">Контактная информация</legend>
-                  <div class="form__field-wrapper form__field-wrapper--contacts form__field-wrapper--phone">
-                    <input type="text" class="form__input" name="phone" id="phone" placeholder="Номер, пожалуйста">
-                    <label class="form__label" for="phone">Номер телефона</label>
-                  </div>
-                  <div class="form__field-wrapper form__field-wrapper--contacts form__field-wrapper--email">
-                    <input type="text" class="form__input" name="email" id="email" placeholder="Введите почту *">
-                    <label class="form__label" for="email">Адрес почты</label>
+                  <div class="form__legend form__legend--contacts">Контактная информация</div>
+                  <div class="form__field-group form__field-group--contacts">
+                    <div class="form__field-wrapper form__field-wrapper--contacts">
+                      <div class="form__contact-container form__contact-container--phone">
+                        <input type="text" class="form__input" name="phone" id="phone" placeholder="Номер, пожалуйста">
+                      </div>
+                      <label class="form__label" for="phone">Номер телефона</label>
+                    </div>
+                    <div class="form__field-wrapper form__field-wrapper--contacts">
+                      <div class="form__contact-container form__contact-container--email">
+                        <input type="text" class="form__input" name="email" id="email" placeholder="Введите почту *">
+                      </div>
+                      <label class="form__label" for="email">Адрес почты</label>
+                    </div>
                   </div>
                 </fieldset>
               </div>
@@ -148,32 +156,34 @@
             <div class="form__container form__container--highlighted">
               <div class="wrapper form__fieldset-wrapper">
                 <fieldset class="form__fieldset form__fieldset--achievements">
-                  <legend class="form__legend form__legend--with-margin">Ваши безбашенные
-                    достижения в путешествии</legend>
-                  <div class="form__field-wrapper form__field-wrapper--checkbox">
-                    <input type="checkbox" class="form__checkbox" name="selfie" id="selfie">
-                    <label class="form__label form__label--checkbox form__label--normal" for="selfie">Сделал селфи с акулой</label>
-                  </div>
-                  <div class="form__field-wrapper form__field-wrapper--checkbox">
-                    <input type="checkbox" class="form__checkbox" name="sunburn" id="sunburn">
-                    <label class="form__label form__label--checkbox form__label--normal" for="sunburn">Обгорел на пляже</label>
-                  </div>
-                  <div class="form__field-wrapper form__field-wrapper--checkbox">
-                    <input type="checkbox" class="form__checkbox" name="norris" id="norris">
-                    <label class="form__label form__label--checkbox form__label--normal" for="norris">Видел Чака Норриса</label>
-                  </div>
-                  <div class="form__field-wrapper form__field-wrapper--checkbox">
-                    <input type="checkbox" class="form__checkbox" name="souvenirs" id="souvenirs">
-                    <label class="form__label form__label--checkbox form__label--normal" for="souvenirs">Накупил сувениров</label>
-                  </div>
-                  <div class="form__field-wrapper form__field-wrapper--checkbox">
-                    <input type="checkbox" class="form__checkbox" name="tower" id="tower">
-                    <label class="form__label form__label--checkbox form__label--normal" for="tower">Удержал башню</label>
-                  </div>
-                  <div class="form__field-wrapper form__field-wrapper--checkbox">
-                    <input type="checkbox" class="form__checkbox" name="hotel" id="hotel">
-                    <label class="form__label form__label--checkbox form__label--normal" for="hotel">Разгромил отель</label>
-                  </div>
+                  <div class="form__legend form__legend--with-margin">Ваши безбашенные
+                    достижения в путешествии</div>
+                    <div class="form__field-group form__field-group--achievements">
+                      <div class="form__field-wrapper form__field-wrapper--checkbox">
+                        <input type="checkbox" class="form__checkbox" name="selfie" id="selfie">
+                        <label class="form__label form__label--checkbox form__label--normal" for="selfie">Сделал селфи с акулой</label>
+                      </div>
+                      <div class="form__field-wrapper form__field-wrapper--checkbox">
+                        <input type="checkbox" class="form__checkbox" name="sunburn" id="sunburn">
+                        <label class="form__label form__label--checkbox form__label--normal" for="sunburn">Обгорел на пляже</label>
+                      </div>
+                      <div class="form__field-wrapper form__field-wrapper--checkbox">
+                        <input type="checkbox" class="form__checkbox" name="norris" id="norris">
+                        <label class="form__label form__label--checkbox form__label--normal" for="norris">Видел Чака Норриса</label>
+                      </div>
+                      <div class="form__field-wrapper form__field-wrapper--checkbox">
+                        <input type="checkbox" class="form__checkbox" name="souvenirs" id="souvenirs">
+                        <label class="form__label form__label--checkbox form__label--normal" for="souvenirs">Накупил сувениров</label>
+                      </div>
+                      <div class="form__field-wrapper form__field-wrapper--checkbox">
+                        <input type="checkbox" class="form__checkbox" name="tower" id="tower">
+                        <label class="form__label form__label--checkbox form__label--normal" for="tower">Удержал башню</label>
+                      </div>
+                      <div class="form__field-wrapper form__field-wrapper--checkbox">
+                        <input type="checkbox" class="form__checkbox" name="hotel" id="hotel">
+                        <label class="form__label form__label--checkbox form__label--normal" for="hotel">Разгромил отель</label>
+                      </div>
+                    </div>
                 </fieldset>
               </div>
             </div>
@@ -181,7 +191,7 @@
           <div class="form__container">
             <div class="wrapper">
               <fieldset class="form__fieldset">
-                <legend class="form__legend">Опишите свои эмоции</legend>
+                <div class="form__legend">Опишите свои эмоции</div>
                 <textarea class="form__textarea" name="feedback" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </fieldset>
             </div>
