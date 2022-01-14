@@ -34,18 +34,18 @@
   &::before {
     content: "";
     display: block;
-    width: 0;
-    height: 0;
-    border-top: 32px solid @white;
-    border-right: 100vw solid transparent;
+    width: 100%;
+    height: 32px;
+    background-color: @white;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
 
     @media (min-width: @tablet-width) {
-      border-top: 54px solid @white;
+      height: 54px;
     }
 
     @media (min-width: @desktop-width) {
-      border-top: 100px solid @white;
       position: absolute;
+      height: 100px;
     }
   }
 }
