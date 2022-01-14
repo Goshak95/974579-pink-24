@@ -1,10 +1,8 @@
 .form-container {
-  padding-top: 54px;
   padding-bottom: 26px;
   line-height: 30px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 100px;
     padding-bottom: 50px;
   }
 
@@ -16,14 +14,22 @@
 .form-container__text {
   margin: 0;
   text-align: center;
+  padding-top: 46px;
 
   & span {
     display: none;
+
+    @media (min-width: @tablet-width) {
+      display: inline;
+    }
   }
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
-    margin-bottom: 74px;
-    padding: 0 65px;
+    padding: 94px 65px 76px 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 83px;
   }
 }
