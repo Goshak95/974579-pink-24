@@ -1,9 +1,13 @@
 .modal {
   width: 100%;
   text-align: center;
+  background-color: @white;
+  border-radius: 5px;
 
   @media (min-width: @tablet-width) {
     width: 460px;
+    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -11,7 +15,107 @@
   }
 }
 
+.modal__wrapper {
+  width: 100%;
+  padding: 40px 27px 0 27px;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px 77px 0 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 44px 192px 0 192px;
+  }
+
+  &--error {
+    padding: 40px 24px 0 24px;
+
+    @media (min-width: @tablet-width) {
+      padding: 44px 82px 0 82px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 44px 215px 0 215px;
+    }
+  }
+}
+
 .modal__title {
+  margin: 0;
+  margin-bottom: 32px;
   font-size: 18px;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+    white-space: pre-line;
+  }
+
+  @media (min-width: @desktop-width) {
+    white-space: normal;
+  }
+}
+
+.modal__text {
+  margin: 0;
+  margin-bottom: 36px;
+
+  @media (max-width: 320px) {
+    white-space: pre-line;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 39px;
+  }
+
+  &--error {
+    margin-bottom: 45px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 63px;
+    }
+  }
+}
+
+.modal__button-wrapper {
+  padding: 50px 20px;
+  background-color: @light-gray;
+
+  @media (min-width: @tablet-width) {
+    padding: 50px 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 50px 160px;
+  }
+
+  &--error {
+    padding: 0 20px 50px 20px;
+    background: transparent;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 80px 52px 80px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 50px 240px;
+      background-color: @light-gray;
+    }
+  }
+}
+
+.modal__button {
+  width: 100%;
+  text-transform: uppercase;
+  border: 2px solid @green;
 }

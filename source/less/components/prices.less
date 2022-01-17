@@ -6,21 +6,21 @@
   &::before {
     content: "";
     display: block;
-    width: 0;
-    height: 0;
-    border-top: 20px solid @white;
-    border-right: 100vw solid transparent;
+    width: 100%;
+    height: 20px;
+    background-color: @white;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
   }
 
   @media (min-width: @tablet-width) {
     &::before {
-      border-top: 42px solid @white;
+      height: 42px;
     }
   }
 
   @media (min-width: @desktop-width) {
     &::before {
-      border-top: 100px solid @white;
+      height: 100px;
     }
   }
 }
