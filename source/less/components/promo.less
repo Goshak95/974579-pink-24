@@ -4,17 +4,30 @@
 
 .promo__header {
   min-height: 237px;
-  background: url("../../img/back-tablet.jpg");
+  background: url("../../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/back-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
+    background-image: url("../../img/back-tablet.jpg");
     min-height: 440px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     min-height: 394px;
     background-image: url("../../img/back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-desktop@2x.jpg");
+    }
   }
 
   &--with-phone {
@@ -37,13 +50,28 @@
   background-size: auto;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/phone@2x.png");
+    background-size: 320px 286px;
+  }
+
   @media (min-width: @tablet-width) {
     background-image: url("../../img/phone-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/phone-tablet@2x.png");
+      background-size: 660px 545px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     background-image: url("../../img/phone-desktop.png");
     background-position: bottom 0 right -150px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/phone-desktop@2x.png");
+      background-size: 1050px 645px;
+    }
   }
 }
 

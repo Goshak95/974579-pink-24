@@ -64,6 +64,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 157px 320px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/features-phone@2x.png");
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -85,6 +89,10 @@
       background-repeat: no-repeat;
       background-position: 0 0;
       background-size: 268px 547px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/features-phone-tablet@2x.png");
+      }
     }
   }
 
@@ -146,14 +154,29 @@
     &--phone {
       &_1 {
         background-image: url("../../img/feature-phone-1.png");
+        background-size: 308px 382px;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../../img/feature-phone-1@2x.png");
+        }
       }
 
       &_2 {
         background-image: url("../../img/feature-phone-2.png");
+        background-size: 308px 382px;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../../img/feature-phone-2@2x.png");
+        }
       }
 
       &_3 {
         background-image: url("../../img/feature-phone-3.png");
+        background-size: 308px 382px;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../../img/feature-phone-3@2x.png");
+        }
       }
     }
   }
