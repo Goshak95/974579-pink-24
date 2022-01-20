@@ -28,8 +28,15 @@
 }
 
 .page-header__logo-icon {
-  &:hover path {
+  fill: @white;
+
+  &:hover {
     fill: @pink;
+  }
+
+  &:active {
+    fill: @white;
+    opacity: 0.3;
   }
 
   &--mobile {
