@@ -10,9 +10,9 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
+import del from 'del';
 
 // Styles
-
 const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
@@ -40,7 +40,6 @@ const scripts = () =>
 
 
 // Server
-
 const server = (done) => {
   browser.init({
     server: {
@@ -67,7 +66,6 @@ const svg = () =>
     .pipe(gulp.dest('build/img/icons'));
 
 // Copy
-
 const copy = (done) =>
   gulp.src([
     'source/fonts/*.{woff2,woff}',
@@ -77,9 +75,11 @@ const copy = (done) =>
   })
     .pipe(gulp.dest('build'));
 
+// Clean
+const clean = () =>
+  del('build');
 
 // Watcher
-
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
@@ -87,5 +87,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  html, styles, scripts, svg, optimizeImages, copy, server, watcher
+  clean, html, styles, scripts, svg, optimizeImages, copy, server, watcher
 );
