@@ -8,6 +8,8 @@ import browser from 'browser-sync';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgmin';
 
 // Styles
 
@@ -52,6 +54,30 @@ const server = (done) => {
   done();
 }
 
+// Images
+const optimizeImages = () =>
+  gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(squoosh())
+  .pipe(gulp.dest('build/img'));
+
+// SVG
+const svg = () =>
+  gulp.src('source/img/icons/*.svg')
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img/icons'));
+
+// Copy
+
+const copy = (done) =>
+  gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico'
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'));
+
+
 // Watcher
 
 const watcher = () => {
@@ -61,5 +87,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  html, styles, scripts, server, watcher
+  html, styles, scripts, svg, optimizeImages, copy, server, watcher
 );
