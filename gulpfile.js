@@ -59,6 +59,10 @@ const optimizeImages = () =>
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'));
 
+const copyImages = () =>
+  gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(gulp.dest('build/img'));
+
 // SVG
 const svg = () =>
   gulp.src('source/img/icons/*.svg')
@@ -82,10 +86,37 @@ const clean = () =>
 // Watcher
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
+  gulp.watch('source/js/*.js', gulp.series(scripts));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 
+// Build
+
+export const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+  ),
+);
+
 export default gulp.series(
-  clean, html, styles, scripts, svg, optimizeImages, copy, server, watcher
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    html,
+    styles,
+    scripts,
+    svg,
+  ),
+  gulp.series(
+    server,
+    watcher,
+  ),
 );
