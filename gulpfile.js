@@ -64,6 +64,14 @@ const copyImages = () =>
   gulp.src('source/img/**/*.{jpg,png}')
   .pipe(gulp.dest('build/img'));
 
+// WEBP
+export const generateWebp = () =>
+  gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(squoosh({
+      webp: {}
+    }))
+    .pipe(gulp.dest('build/img'));
+
 // SVG
 const svg = () =>
   gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
@@ -108,6 +116,7 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
+  generateWebp,
   gulp.parallel(
     styles,
     html,
@@ -121,6 +130,7 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
+  generateWebp,
   gulp.parallel(
     html,
     styles,
