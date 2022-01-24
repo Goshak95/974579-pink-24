@@ -22,9 +22,10 @@
   border: 3px solid fade(@gray-blue, 10%);
   border-radius: 50%;
   cursor: pointer;
+  color: @pink;
 
   & svg {
-    width: 100%;
+    margin: 0 auto;
   }
 
   &:hover {
@@ -33,9 +34,6 @@
 
   &:active {
     border: 3px solid fade(@gray-blue, 10%);
-
-    & path {
-      fill: fade(@pink, 30%);
-    }
+    color: fade(@pink, 30%);
   }
 }
