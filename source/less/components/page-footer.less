@@ -34,15 +34,14 @@
 }
 
 .page-footer__logo-icon {
-  fill: @gray-blue;
+  color: @gray-blue;
 
   &:hover {
-    fill: @pink;
+    color: @pink;
   }
 
   &:active {
-    fill: @gray-blue;
-    opacity: 0.3;
+    color: fade(@gray-blue, 30%);
   }
 
   @media (min-width: @desktop-width) {

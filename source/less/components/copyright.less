@@ -10,12 +10,17 @@
 
 .copyright__link {
   cursor: pointer;
+  color: @pink;
 
-  &:hover path {
-    fill: @gray-blue;
+  &:visited {
+    color: @pink;
   }
 
-  &:active path {
-    fill: fade(@gray-blue, 30%);
+  &:hover {
+    color: @gray-blue;
+  }
+
+  &:active {
+    color: fade(@gray-blue, 30%);
   }
 }

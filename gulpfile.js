@@ -11,6 +11,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import del from 'del';
+import svgstore from 'gulp-svgstore';
 
 // Styles
 const styles = () => {
@@ -65,9 +66,19 @@ const copyImages = () =>
 
 // SVG
 const svg = () =>
+  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'));
+
+// SVG sprite
+const sprite = () =>
   gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
-    .pipe(gulp.dest('build/img/icons'));
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'))
 
 // Copy
 const copy = (done) =>
@@ -102,6 +113,7 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
+    sprite,
   ),
 );
 
@@ -114,6 +126,7 @@ export default gulp.series(
     styles,
     scripts,
     svg,
+    sprite,
   ),
   gulp.series(
     server,
