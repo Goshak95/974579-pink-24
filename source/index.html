@@ -270,7 +270,14 @@
         </div>
       </section>
       <div class="map">
-        <img src="img/map.jpg" alt="Карта" class="map__image">
+        <picture>
+          <source type="image/webp" media="(min-width: 980px" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 660px" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map.webp 1x, img/map@2x.webp 2x">
+          <source media="(min-width: 980px" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="map__image" src="img/map.jpg" srcset="img/map@2x.jpg 2x" alt="Карта">
+        </picture>
       </div>
     </main>
     <footer class="page-footer">
