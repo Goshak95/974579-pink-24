@@ -1,6 +1,6 @@
 .downloads {
   background-color: @dark-blue;
-  padding: 28px 0;
+  padding: 28px 0 31px 0;
 
   @media (min-width: @tablet-width) {
     position: absolute;
@@ -30,15 +30,14 @@
 }
 
 .downloads__button {
+  width: 100%;
   margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
     margin-bottom: 46px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
     margin-bottom: 67px;
   }
 }
@@ -47,7 +46,7 @@
   .normalize-list();
   display: flex;
   align-items: flex-end;
-  margin-bottom: 28px;
+  margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 38px;
@@ -59,6 +58,10 @@
 }
 
 .downloads__item {
+  &:not(:first-child) {
+    margin-bottom: 3px;
+  }
+
   &:not(:last-child) {
     margin-right: 35px;
   }

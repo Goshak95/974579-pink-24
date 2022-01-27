@@ -1,7 +1,7 @@
 .socials {
   .normalize-list();
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -17,8 +17,8 @@
 .socials__link {
   display: flex;
   align-items: center;
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   border: 3px solid fade(@gray-blue, 10%);
   border-radius: 50%;
   cursor: pointer;
@@ -35,5 +35,12 @@
   &:active {
     border: 3px solid fade(@gray-blue, 10%);
     color: fade(@pink, 30%);
+  }
+
+  &--youtube {
+    & svg {
+      position: relative;
+      left: 2px;
+    }
   }
 }
