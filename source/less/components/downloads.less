@@ -5,7 +5,7 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     background-color: transparent;
-    bottom: 120px;
+    bottom: 114px;
     left: calc((100% - @tablet-width) / 2 + @content-padding);
     padding: 0;
   }
@@ -34,7 +34,7 @@
   margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 46px;
+    margin-bottom: 47px;
   }
 
   @media (min-width: @desktop-width) {
@@ -46,10 +46,12 @@
   .normalize-list();
   display: flex;
   align-items: flex-end;
-  margin-bottom: 14px;
+  margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 38px;
+    align-self: flex-start;
+    margin-left: 46px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: @desktop-width) {
@@ -65,6 +67,20 @@
   &:not(:last-child) {
     margin-right: 35px;
   }
+
+  & img {
+    display: flex;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:nth-child(2) {
+      margin-bottom: 4px;
+    }
+
+    &:last-child {
+      margin-bottom: 7px;
+    }
+  }
 }
 
 .downloads__info {
@@ -74,4 +90,8 @@
   text-align: center;
   color: @white;
   font-weight: 300;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
 }
