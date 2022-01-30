@@ -12,7 +12,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 77px 0 171px 0;
+    padding: 62px 0 53px 0;
   }
 }
 
@@ -120,7 +120,7 @@
     flex-direction: row;
     justify-content: space-between;
     background-image: none;
-    padding: 0 24px 60px 24px;
+    padding: 5px 0 14px 0;
     margin-left: 0;
     position: relative;
   }
@@ -145,10 +145,11 @@
     background-position-x: center;
     background-repeat: no-repeat;
     text-align: center;
-    padding-top: 300px;
+    padding: 300px 30px 40px 30px;
+    width: 300px;
 
     &:not(:last-child) {
-      margin: 0 68px 0 0;
+      margin: 0 20px 0 0;
     }
 
     &--phone {
@@ -195,16 +196,20 @@
     background-color: @light-gray;
     font-size: 30px;
     line-height: 30px;
-    padding-top: 60px;
-    margin: 0 0 35px 0;
+    padding-top: 56px;
+    margin: 0 0 22px 0;
   }
 }
 
 .features__text {
   margin: 0;
 
-  &--with-margin {
+  &--main {
     margin-bottom: 11px;
+
+    & br {
+      display: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -216,8 +221,12 @@
     line-height: 30px;
     white-space: normal;
 
-    &--with-margin {
+    &--main {
       margin-bottom: 33px;
+
+      & br {
+        display: block;
+      }
     }
   }
 }
@@ -247,10 +256,6 @@
     align-items: flex-end;
   }
 
-  @media (min-width: @desktop-width) {
-    align-items: center;
-  }
-
   &::before {
     content: "";
     display: block;
@@ -269,7 +274,7 @@
       background-size: 298px 345px;
       padding-top: 17px;
       padding-bottom: 67px;
-      background-position: 0 17px;
+      background-position: 2px 14px;
     }
   }
 }
@@ -277,6 +282,10 @@
 .features__data {
   margin-left: 72px;
   margin-bottom: 22px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 115px;
+  }
 }
 
 
@@ -288,7 +297,7 @@
   white-space: pre-line;
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 10px 0;
+    margin: 0 0 23px 0;
     white-space: normal;
   }
 }

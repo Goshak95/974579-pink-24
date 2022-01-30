@@ -2,11 +2,11 @@
   padding: 42px 0 34px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 42px 0 23px 0;
+    padding: 42px 0 25px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 74px 0 15px  0;
+    padding: 56px 0 20px 0;
   }
 }
 
@@ -14,11 +14,11 @@
   margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 35px;
+    margin-bottom: 34px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 55px;
+    margin-bottom: 40px;
   }
 }
 
@@ -31,11 +31,12 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 10px;
+    padding: 0 9px;
   }
 
   @media (min-width: @desktop-width) {
-    flex-wrap: no-wrap;
+    padding: 0 12px 0 47px;
+    flex-wrap: nowrap;
   }
 }
 
@@ -55,8 +56,16 @@
   }
 
   @media (min-width: @desktop-width) {
-    flex-grow: 1;
+    flex-grow: 0;
     margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 112px;
+    }
+
+    &:last-child {
+      left: -18px;
+    }
   }
 
   &--main {
@@ -74,6 +83,11 @@
 
     @media (min-width: @desktop-width) {
       order: 0;
+      flex-grow: 0;
+
+      & .contacts__caption {
+        margin-bottom: 21px;
+      }
     }
   }
 }
@@ -86,6 +100,10 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 2px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 21px;
+  }
 }
 
 .contacts__text {
@@ -96,6 +114,8 @@
   font-weight: 300;
 
   &--mail {
+    cursor: pointer;
+
     &:hover {
       color: @gray-blue;
       text-decoration: underline;

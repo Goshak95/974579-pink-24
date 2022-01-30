@@ -7,11 +7,21 @@
     margin-right: 92px;
     margin-bottom: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
 }
 
 .socials__item {
   &:not(:last-child) {
     margin-right: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
   }
 }
 

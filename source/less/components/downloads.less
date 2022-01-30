@@ -13,7 +13,7 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     background-color: transparent;
-    bottom: 130px;
+    bottom: 125px;
     left: calc((100% - @desktop-width) / 2 + @content-padding);
   }
 }
@@ -38,6 +38,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    font-size: 21px;
     margin-bottom: 67px;
   }
 }
@@ -55,7 +56,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 58px;
+    margin-bottom: 52px;
   }
 }
 
@@ -79,6 +80,21 @@
 
     &:last-child {
       margin-bottom: 7px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      margin-right: 34px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 37px;
+      margin-bottom: 1px;
+    }
+
+    &:last-child {
+      margin-bottom: 3px;
     }
   }
 }
