@@ -84,7 +84,8 @@
     padding-right: 640px;
   }
 
-  &--wide {
+  &--form,
+  &--gallery {
     padding-top: 95px;
     padding-bottom: 43px;
     line-height: 32.68px;
@@ -96,9 +97,17 @@
       font-size: 50px;
       line-height: 68.09px;
     }
+  }
 
+  &--gallery {
     @media (min-width: @desktop-width) {
       padding: 169px 141px 89px;
+    }
+  }
+
+  &--form {
+    @media (min-width: @desktop-width) {
+      padding: 169px 85px 89px;
     }
   }
 }
