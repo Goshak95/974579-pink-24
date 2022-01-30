@@ -58,7 +58,12 @@
     @media (min-width: @desktop-width) {
       & .card__like {
         position: absolute;
-        right: 27px;
+        right: 30px;
+      }
+
+      &::before {
+        top: 54px;
+        right: 130px;
       }
     }
   }
@@ -78,7 +83,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 18px 27px;
+    padding: 24px 31px 23px 27px;
   }
 }
 
@@ -128,6 +133,10 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-bottom: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 5px;
   }
 }
 
