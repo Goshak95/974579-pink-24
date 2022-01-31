@@ -29,18 +29,6 @@
       background-image: url("../../img/back-desktop@2x.jpg");
     }
   }
-
-  &--with-phone {
-    min-height: 462px;
-
-    @media (min-width: @tablet-width) {
-      min-height: 729px;
-    }
-
-    @media (min-width: @desktop-width) {
-      min-height: 853px;
-    }
-  }
 }
 
 .promo__wrapper {
@@ -66,7 +54,7 @@
 
   @media (min-width: @desktop-width) {
     background-image: url("../../img/phone-desktop.png");
-    background-position: bottom 0 right -150px;
+    background-position: bottom 0 right -106px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/phone-desktop@2x.png");
@@ -76,39 +64,50 @@
 }
 
 .promo__title {
-  padding-top: 95px;
-  padding-bottom: 320px;
+  padding-top: 90px;
+  padding-bottom: 314px;
 
   @media (min-width: @tablet-width) {
     font-size: 40px;
     line-height: 48px;
-    padding-top: 212px;
-    padding-bottom: 390px;
+    padding-top: 204px;
+    padding-bottom: 381px;
     padding-right: 320px;
+    white-space: pre-line;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 50px;
     line-height: 68px;
-    padding-top: 224px;
-    padding-bottom: 455px;
-    padding-right: 629px;
+    padding-top: 209px;
+    padding-bottom: 440px;
+    padding-right: 640px;
   }
 
-  &--wide {
+  &--form,
+  &--gallery {
     padding-top: 95px;
-    padding-bottom: 50px;
+    padding-bottom: 43px;
+    line-height: 32.68px;
 
     @media (min-width: @tablet-width) {
-      padding-top: 191px;
-      padding-bottom: 74px;
+      padding-top: 177px;
+      padding-bottom: 59px;
       padding-right: 0;
+      font-size: 50px;
+      line-height: 68.09px;
     }
+  }
 
+  &--gallery {
     @media (min-width: @desktop-width) {
-      padding-top: 184px;
-      padding-bottom: 104px;
-      padding-right: 0;
+      padding: 169px 141px 89px;
+    }
+  }
+
+  &--form {
+    @media (min-width: @desktop-width) {
+      padding: 169px 85px 89px;
     }
   }
 }

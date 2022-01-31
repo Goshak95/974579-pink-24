@@ -32,5 +32,17 @@
     width: 36px;
     height: 36px;
     background-image: url("../../img/marker.svg");
+
+    @media (min-width: @tablet-width) {
+      top: calc(50% + 7px);
+    }
+
+    @media (min-width: @desktop-width) {
+      top: calc(50% + 12px);
+    }
   }
+}
+
+.map__image {
+  display: flex;
 }

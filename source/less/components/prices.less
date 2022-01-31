@@ -30,20 +30,19 @@
   padding-top: 82px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 56px;
+    padding-top: 55px;
     padding-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 56px;
-    padding-bottom: 98px;
+    padding: 58px 18px 98px 18px;
   }
 }
 
 .prices__list {
   .normalize-list();
   display: flex;
-  width: calc(100% * 3);
+  width: calc(100% * 3 - 4px);
   transform: translateX(-33.3%);
 
   @media (min-width: @tablet-width) {
@@ -56,13 +55,26 @@
   position: relative;
   width: 100%;
   background-color: @white;
+  overflow: hidden;
 
-  &:first-child .prices__option {
-    border-left: 2px solid @gray;
+  &:last-child .prices__option {
+    border-right: 2px solid @gray;
   }
 
-  &:not(:last-child) .prices__info {
-    border-right: 2px solid @light-gray;
+  &:nth-child(n+3) .prices__info {
+    border-left: 2px solid @light-gray;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:last-child .prices__info {
+      padding-right: 37px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:last-child .prices__info {
+      padding-right: 30px;
+    }
   }
 
   &--with-empty {
@@ -75,12 +87,12 @@
       &::before {
         content: "";
         width: 100%;
-        padding: 38px 0 35px 0;
+        padding: 42px 0 35px 0;
         border-bottom: 2px solid @gray;
         background-color: @light-gray;
 
         @media (min-width: @desktop-width) {
-          padding: 46px 0;
+          padding: 48px 0;
         }
       }
 
@@ -88,7 +100,7 @@
         padding: 8px 15px 7px 15px;
 
         @media (min-width: @desktop-width) {
-          padding: 14.5px 22px;
+          padding: 13px 22px 16px;
         }
       }
 
@@ -103,12 +115,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px 30px 22px 30px;
+  padding: 12px 32px 32px 32px;
   background-color: @gray-blue;
   color: @white;
   text-align: center;
-  overflow: hidden;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 12px 33px 13px 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 30px 25px;
+  }
 
   &--hit {
     &::before {
@@ -117,31 +136,46 @@
       align-items: center;
       justify-content: center;
       color: @white;
-      transform: rotate(-40deg);
-      top: 14px;
-      left: -20px;
+      transform: rotate(-45deg);
+      top: 18px;
+      left: -26px;
       position: absolute;
       background-color: @pink;
       width: 104px;
       height: 23px;
+      z-index: 10;
     }
-  }
 
-  @media (min-width: @tablet-width) {
-    padding: 9px 30px 6px 30px;
+    @media (min-width: @tablet-width) {
+      &::before {
+        background-color: transparent;
+        top: 13px;
+        left: -32px;
+      }
 
-    &::before {
-      top: 6px;
-      left: -33px;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: @pink;
+        z-index: 5;
+        width: 100%;
+        clip-path: polygon(0 32px, 32px 0, 59px 0, 0 59px);
+        height: 100%;
+      }
     }
-  }
 
-  @media (min-width: @desktop-width) {
-    padding: 12px 30px 22px 30px;
+    @media (min-width: @desktop-width) {
+      &::before {
+        top: 17px;
+        left: -25px;
+      }
 
-    &::before {
-      top: 14px;
-      left: -20px;
+      &::after {
+        clip-path: polygon(0 41px, 41px 0, 74px 0, 0 74px);
+      }
     }
   }
 }
@@ -153,6 +187,7 @@
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
+    margin-bottom: 4px;
   }
 }
 
@@ -160,6 +195,7 @@
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 300;
+  line-height: 24px;
 
   @media (min-width: @desktop-width) {
     font-size: 24px;
@@ -168,8 +204,8 @@
 
 .prices__option {
   position: relative;
-  padding: 15px 15px;
-  border-right: 2px solid @gray;
+  padding: 14px 14px 15px 19px;
+  border-left: 2px solid @gray;
   border-bottom: 2px solid @gray;
 
   &::after {
@@ -196,7 +232,7 @@
 
       @media (min-width: @tablet-width) {
         top: calc(50% - 10.5px);
-        right: calc(50% - 17px);
+        right: calc(50% - 15px);
       }
     }
   }
@@ -211,7 +247,7 @@
 
       @media (min-width: @tablet-width) {
         top: calc(50% - 13.5px);
-        right: calc(50% - 15px);
+        right: calc(50% - 12px);
       }
     }
   }
@@ -233,7 +269,7 @@
 
 .prices__controls {
   display: flex;
-  padding: 42px 0 46px 0;
+  padding: 42px 0 50px 0;
   justify-content: center;
   align-items: center;
 

@@ -7,11 +7,12 @@
   padding-bottom: 50px;
   margin: 0;
   text-align: center;
+  white-space: pre-line;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
-    padding-top: 92px;
-    padding-bottom: 76px;
+    padding: 92px 30px 76px 30px;
+    white-space: normal;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,7 +24,7 @@
   .normalize-list();
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 20px;
+  row-gap: 19px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -32,7 +33,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 55px 20px;
+    gap: 54px 20px;
   }
 }
 

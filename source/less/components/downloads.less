@@ -1,11 +1,11 @@
 .downloads {
   background-color: @dark-blue;
-  padding: 28px 0;
+  padding: 28px 0 31px 0;
 
   @media (min-width: @tablet-width) {
     position: absolute;
     background-color: transparent;
-    bottom: 120px;
+    bottom: 114px;
     left: calc((100% - @tablet-width) / 2 + @content-padding);
     padding: 0;
   }
@@ -13,7 +13,7 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     background-color: transparent;
-    bottom: 130px;
+    bottom: 125px;
     left: calc((100% - @desktop-width) / 2 + @content-padding);
   }
 }
@@ -30,15 +30,15 @@
 }
 
 .downloads__button {
+  width: 100%;
   margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
-    margin-bottom: 46px;
+    margin-bottom: 47px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
+    font-size: 21px;
     margin-bottom: 67px;
   }
 }
@@ -47,20 +47,55 @@
   .normalize-list();
   display: flex;
   align-items: flex-end;
-  margin-bottom: 28px;
+  margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 38px;
+    align-self: flex-start;
+    margin-left: 46px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 58px;
+    margin-bottom: 52px;
   }
 }
 
 .downloads__item {
+  &:not(:first-child) {
+    margin-bottom: 3px;
+  }
+
   &:not(:last-child) {
     margin-right: 35px;
+  }
+
+  & img {
+    display: flex;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:nth-child(2) {
+      margin-bottom: 4px;
+    }
+
+    &:last-child {
+      margin-bottom: 7px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      margin-right: 34px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 37px;
+      margin-bottom: 1px;
+    }
+
+    &:last-child {
+      margin-bottom: 3px;
+    }
   }
 }
 
@@ -71,4 +106,8 @@
   text-align: center;
   color: @white;
   font-weight: 300;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
 }

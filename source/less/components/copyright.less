@@ -1,16 +1,27 @@
 .copyright {
   display: flex;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    align-self: center;
+  }
 }
 
 .copyright__text {
   line-height: 18px;
   margin-right: 15px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    margin-right: 13px;
+  }
 }
 
 .copyright__link {
   cursor: pointer;
   color: @pink;
+  position: relative;
+  top: 3px;
 
   &:visited {
     color: @pink;
