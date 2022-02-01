@@ -1,6 +1,7 @@
 class AppClass {
   init() {
     this.addMenuHandler();
+    this.showInteractiveMap();
   }
 
   addMenuHandler() {
@@ -9,6 +10,11 @@ class AppClass {
     menuButton.addEventListener('click', () => {
       menu.classList.toggle('main-nav--closed');
     });
+  }
+
+  showInteractiveMap() {
+    const map = document.querySelector('.map');
+    map.classList.toggle('map--interactive');
   }
 }
 
