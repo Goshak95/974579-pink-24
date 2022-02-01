@@ -2,6 +2,7 @@ class AppClass {
   init() {
     this.addMenuHandler();
     this.showInteractiveMap();
+    this.addTableButtonsHandler();
   }
 
   addMenuHandler() {
@@ -15,6 +16,19 @@ class AppClass {
   showInteractiveMap() {
     const map = document.querySelector('.map');
     map.classList.toggle('map--interactive');
+  }
+
+  addTableButtonsHandler() {
+    const pricesList = document.querySelector('.prices__list');
+    const pricesControls = document.querySelectorAll('.prices__controls > .control-button');
+
+    pricesControls.forEach((button, index, arr) => {
+      button.addEventListener('click', () => {
+        pricesList.style.setProperty('transform', `translateX: ${index * -(100 / arr.length)}%`);
+        arr.forEach((control) => control.classList.remove('control-button--active'));
+        button.classList.add('control-button--active');
+      });
+    })
   }
 }
 
