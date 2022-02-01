@@ -4,6 +4,42 @@
   top: 0;
   width: 100%;
   z-index: 10;
+
+  &--no-js {
+    @media (max-width: @tablet-width-only) {
+      position: static;
+
+      & .page-header__container {
+        position: relative;
+        padding: 0;
+        width: 100%;
+      }
+
+      & .page-header__logo {
+        position: absolute;
+        top: 22px;
+        left: 20px;
+      }
+
+      & .main-nav {
+        position: static;
+      }
+
+      & .main-nav__button-container {
+        height: 70px;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      & .page-header__logo {
+        top: 27px;
+      }
+
+      & .main-nav__button-container {
+        height: 109px;
+      }
+    }
+  }
 }
 
 .page-header__container {

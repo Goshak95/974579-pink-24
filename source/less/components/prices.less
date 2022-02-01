@@ -44,6 +44,19 @@
   display: flex;
   width: calc(100% * 3 - 4px);
   transform: translateX(-33.3%);
+  transition: transform 0.3s;
+
+  &--state-0 {
+    transform: translateX(0);
+  }
+
+  &--state-1 {
+    transform: translateX(-33.3%);
+  }
+
+  &--state-2 {
+    transform: translateX(-66.6%);
+  }
 
   @media (min-width: @tablet-width) {
     width: 100%;

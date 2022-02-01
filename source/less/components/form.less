@@ -472,6 +472,16 @@
     outline: none;
     border-color: @gray-blue;
   }
+
+  &:disabled ~ .form__label::before {
+    outline: none;
+    border-color: fade(@gray, 50%);
+  }
+
+  &:disabled ~ .form__label {
+    cursor: default;
+    color: fade(@gray-blue, 50%);
+  }
 }
 
 .form__radio {
@@ -499,6 +509,16 @@
   &:focus ~ .form__label::before {
     outline: none;
     border-color: @gray-blue;
+  }
+
+  &:disabled ~ .form__label::before {
+    outline: none;
+    border-color: fade(@gray, 50%);
+  }
+
+  &:disabled ~ .form__label {
+    cursor: default;
+    color: fade(@gray-blue, 50%);
   }
 }
 

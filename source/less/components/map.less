@@ -8,11 +8,12 @@
     content: "";
     position: absolute;
     display: block;
-    top: 0;
+    top: -1px;
     width: 100%;
     height: 33px;
     clip-path: polygon(50% 33px, 0 0, 100% 0);
     background-color: @white;
+    z-index: 2;
 
     @media (min-width: @tablet-width) {
       height: 68px;
@@ -41,8 +42,39 @@
       top: calc(50% + 12px);
     }
   }
+
+  &--interactive {
+    & .map__image {
+      display: none;
+    }
+
+    & .map__iframe {
+      display: block;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .map__image {
   display: flex;
+}
+
+.map__iframe {
+  width: 100%;
+  position: relative;
+  display: none;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    height: 374px;
+    min-width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 502px;
+    min-width: @desktop-width;
+  }
 }
