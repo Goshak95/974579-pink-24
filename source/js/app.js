@@ -3,6 +3,7 @@ class AppClass {
     this.addMenuHandler();
     this.showInteractiveMap();
     this.addTableButtonsHandler();
+    this.removeNoJsHeaderState();
   }
 
   addMenuHandler() {
@@ -29,6 +30,11 @@ class AppClass {
         button.classList.add('control-button--active');
       });
     })
+  }
+
+  removeNoJsHeaderState() {
+    const header = document.querySelector('.page-header');
+    header.classList.remove('page-header--no-js');
   }
 }
 
