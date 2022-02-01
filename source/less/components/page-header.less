@@ -24,11 +24,19 @@
       & .main-nav {
         position: static;
       }
+
+      & .main-nav__button-container {
+        height: 70px;
+      }
     }
 
-    @media (max-width: @tablet-width-only) {
+    @media (min-width: @tablet-width) {
       & .page-header__logo {
         top: 27px;
+      }
+
+      & .main-nav__button-container {
+        height: 109px;
       }
     }
   }
