@@ -1,9 +1,12 @@
 class AppClass {
   init() {
     this.addMenuHandler();
-    this.showInteractiveMap();
-    this.addTableButtonsHandler();
     this.removeNoJsHeaderState();
+
+    if (document.location.pathname === '/index.html') {
+      this.showInteractiveMap();
+      this.addTableButtonsHandler();
+    }
   }
 
   addMenuHandler() {
@@ -27,8 +30,8 @@ class AppClass {
       button.addEventListener('click', () => {
         // pricesList.style.setProperty('transform', `translateX: ${index * -(100 / arr.length)}%`);
         pricesList.classList = 'prices__list';
-        console.log("🚀 ~ file: app.js ~ line 30 ~ AppClass ~ button.addEventListener ~ pricesList", pricesList)
         pricesList.classList.add(`prices__list--state-${index}`);
+
         arr.forEach((control) => control.classList.remove('control-button--active'));
         button.classList.add('control-button--active');
       });
