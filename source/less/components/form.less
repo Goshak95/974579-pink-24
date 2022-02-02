@@ -350,6 +350,7 @@
       border-radius: 50%;
       background-color: @white;
       margin-right: 29px;
+      flex-shrink: 0;
     }
 
     @media (min-width: @tablet-width) {
@@ -489,7 +490,7 @@
   &:checked ~ .form__label::after {
     content: "";
     position: absolute;
-    top: 14px;
+    top: calc(50% - 7.5px);
     left: 13px;
     width: 15px;
     height: 15px;
