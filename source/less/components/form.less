@@ -147,9 +147,9 @@
   &--achievements {
     @media (min-width: @desktop-width) {
       display: grid;
-      grid-template-columns: max-content max-content max-content;
+      grid-template-columns: auto auto auto;
       justify-content: space-between;
-      gap: 43px 0;
+      gap: 43px 56px;
     }
   }
 }
@@ -327,10 +327,12 @@
       border: 2px solid @gray;
       background-color: @white;
       margin-right: 20px;
+      flex-shrink: 0;
     }
 
     @media (min-width: @desktop-width) {
       margin-right: 0;
+      white-space: normal;
     }
   }
 
@@ -350,6 +352,7 @@
       border-radius: 50%;
       background-color: @white;
       margin-right: 29px;
+      flex-shrink: 0;
     }
 
     @media (min-width: @tablet-width) {
@@ -385,6 +388,7 @@
 }
 
 .form__legend {
+  display: block;
   color: @pink;
   text-transform: uppercase;
   line-height: 18px;
@@ -488,7 +492,7 @@
   &:checked ~ .form__label::after {
     content: "";
     position: absolute;
-    top: 14px;
+    top: calc(50% - 7.5px);
     left: 13px;
     width: 15px;
     height: 15px;
