@@ -147,9 +147,9 @@
   &--achievements {
     @media (min-width: @desktop-width) {
       display: grid;
-      grid-template-columns: max-content max-content max-content;
+      grid-template-columns: auto auto auto;
       justify-content: space-between;
-      gap: 43px 0;
+      gap: 43px 56px;
     }
   }
 }
@@ -327,10 +327,12 @@
       border: 2px solid @gray;
       background-color: @white;
       margin-right: 20px;
+      flex-shrink: 0;
     }
 
     @media (min-width: @desktop-width) {
       margin-right: 0;
+      white-space: normal;
     }
   }
 
