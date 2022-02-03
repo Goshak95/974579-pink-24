@@ -41,8 +41,10 @@ class AppClass {
   removeNoJsHeaderState() {
     const header = document.querySelector('.page-header');
     const menuButton = document.querySelector('.main-nav__button');
+    const mainNav = document.querySelector('.main-nav');
     header.classList.remove('page-header--no-js');
     menuButton.classList.remove('visually-hidden');
+    mainNav.classList.add('main-nav--closed');
   }
 }
 
